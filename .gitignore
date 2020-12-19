@@ -1,0 +1,12 @@
+*.pyc
+__pycache__
+.idea
+.ipynb_checkpoints
+*.pt
+.vscode
+*.pkl
+*.json
+*.npy
+input/
+data/
+dataset/
