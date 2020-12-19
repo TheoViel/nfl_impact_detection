@@ -1,0 +1,21 @@
+
+-------------   Fold 1 / 5  -------------
+
+Downloading: "https://github.com/rwightman/efficientdet-pytorch/releases/download/v0.1/tf_efficientdet_d6_52-4eda3773.pth" to /home/theo/.cache/torch/hub/checkpoints/tf_efficientdet_d6_52-4eda3773.pth
+    -> 8012 training images
+    -> 2005 validation images
+    -> 51566862 trainable parameters
+
+Epoch 01/10 	 lr=4.7e-04	 t=1349s	loss=70.372	f1_scores : 0.0000 - 0.0478 - 0.0000
+Epoch 02/10 	 lr=4.2e-04	 t=1373s	loss=0.582	f1_scores : 0.0000 - 0.1072 - 0.0000
+Epoch 03/10 	 lr=3.7e-04	 t=1356s	loss=0.489	f1_scores : 0.0000 - 0.1378 - 0.0000
+Epoch 04/10 	 lr=3.2e-04	 t=1374s	loss=0.434	f1_scores : 0.0493 - 0.1729 - 0.0493
+Epoch 05/10 	 lr=2.6e-04	 t=1360s	loss=0.391	f1_scores : 0.0551 - 0.1211 - 0.0551
+Epoch 06/10 	 lr=2.1e-04	 t=1371s	loss=0.354	f1_scores : 0.1268 - 0.1576 - 0.1263
+Epoch 07/10 	 lr=1.6e-04	 t=1368s	loss=0.324	f1_scores : 0.1222 - 0.1667 - 0.1222
+Epoch 08/10 	 lr=1.1e-04	 t=1358s	loss=0.296	f1_scores : 0.1612 - 0.1733 - 0.1616
+Epoch 09/10 	 lr=5.3e-05	 t=1359s	loss=0.272	f1_scores : 0.1548 - 0.1782 - 0.1542
+Epoch 10/10 	 lr=0.0e+00	 t=1370s	loss=0.250	f1_scores : 0.1692 - 0.1688 - 0.1684
+
+ -> Saving weights to ../logs/2020-12-09/13/tf_efficientdet_d6_0.pt
+

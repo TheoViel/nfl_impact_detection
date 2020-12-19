@@ -1,0 +1,8 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 8012 training images
+    -> 2005 validation images
+    -> 20545475 trainable parameters
+
+Epoch 01/07 	 lr=9.0e-04	 t=658s	loss=64.201	f1_scores : 0.0000 - 0.0608 - 0.0000

@@ -1,0 +1,8 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 8012 training images
+    -> 2005 validation images
+    -> 20545475 trainable parameters
+
+Epoch 01/02 	 lr=2.6e-04	 t=608s	loss=75.706	helmet_f1_score=0.0021 	impact_f1_score=0.0000

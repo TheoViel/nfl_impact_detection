@@ -1,0 +1,4 @@
+
+-------------   Fold 1 / 5  -------------
+
+Downloading: "https://github.com/rwightman/efficientdet-pytorch/releases/download/v0.1/tf_efficientdet_d5_51-c79f9be6.pth" to /home/theo/.cache/torch/hub/checkpoints/tf_efficientdet_d5_51-c79f9be6.pth

@@ -1,0 +1,33 @@
+
+-------------   Fold 1 / 5  -------------
+
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 154983 training images
+    -> 38748 validation images
+    -> 22981953 trainable parameters
+
+Using 315 out of 1210 batches by limiting to 20 samples per player.
+
+Epoch 01/10 	 lr=9.5e-04	 t=96s 	loss=0.328	val_loss=0.314 	 auc=0.818
+Epoch 02/10 	 lr=8.4e-04	 t=95s 	loss=0.304	val_loss=0.286 	 auc=0.788
+Epoch 03/10 	 lr=7.4e-04	 t=95s 	loss=0.290	val_loss=0.275 	 auc=0.793
+Epoch 04/10 	 lr=6.3e-04	 t=96s 	loss=0.290	val_loss=0.250 	 auc=0.847
+Epoch 05/10 	 lr=5.3e-04	 t=96s 	loss=0.282	val_loss=0.251 	 auc=0.831
+Epoch 06/10 	 lr=4.2e-04	 t=96s 	loss=0.279	val_loss=0.247 	 auc=0.847
+Epoch 07/10 	 lr=3.2e-04	 t=96s 	loss=0.275	val_loss=0.249 	 auc=0.852
+Epoch 08/10 	 lr=2.1e-04	 t=96s 	loss=0.266	val_loss=0.229 	 auc=0.871
+Epoch 09/10 	 lr=1.1e-04	 t=96s 	loss=0.265	val_loss=0.225 	 auc=0.880
+Epoch 10/10 	 lr=0.0e+00	 t=96s 	loss=0.249	val_loss=0.222 	 auc=0.884
+
+ -> Saving weights to ../logs_cls/2020-12-12/2/resnext50_32x4d_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 155072 training images
+    -> 38659 validation images
+    -> 22981953 trainable parameters
+
+Using 314 out of 1211 batches by limiting to 20 samples per player.
+

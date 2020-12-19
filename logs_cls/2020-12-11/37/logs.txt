@@ -1,0 +1,167 @@
+
+-------------   Fold 1 / 5  -------------
+
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 154983 training images
+    -> 38748 validation images
+    -> 11177025 trainable parameters
+
+Using 157 out of 605 batches by limiting to 20 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=23s 	loss=0.361	val_loss=0.269 	 auc=0.807
+Epoch 02/20 	 lr=9.5e-04	 t=22s 	loss=0.292	val_loss=0.281 	 auc=0.796
+Epoch 03/20 	 lr=8.9e-04	 t=40s 	loss=0.289	val_loss=0.268 	 auc=0.822
+Epoch 04/20 	 lr=8.4e-04	 t=41s 	loss=0.286	val_loss=0.267 	 auc=0.817
+Epoch 05/20 	 lr=7.9e-04	 t=22s 	loss=0.279	val_loss=0.278 	 auc=0.855
+Epoch 06/20 	 lr=7.4e-04	 t=22s 	loss=0.277	val_loss=0.286 	 auc=0.855
+Epoch 07/20 	 lr=6.8e-04	 t=22s 	loss=0.271	val_loss=0.261 	 auc=0.850
+Epoch 08/20 	 lr=6.3e-04	 t=39s 	loss=0.268	val_loss=0.239 	 auc=0.861
+Epoch 09/20 	 lr=5.8e-04	 t=22s 	loss=0.263	val_loss=0.242 	 auc=0.858
+Epoch 10/20 	 lr=5.3e-04	 t=22s 	loss=0.264	val_loss=0.241 	 auc=0.863
+Epoch 11/20 	 lr=4.7e-04	 t=22s 	loss=0.262	val_loss=0.264 	 auc=0.871
+Epoch 12/20 	 lr=4.2e-04	 t=22s 	loss=0.259	val_loss=0.242 	 auc=0.857
+Epoch 13/20 	 lr=3.7e-04	 t=22s 	loss=0.258	val_loss=0.244 	 auc=0.874
+Epoch 14/20 	 lr=3.2e-04	 t=22s 	loss=0.251	val_loss=0.248 	 auc=0.884
+Epoch 15/20 	 lr=2.6e-04	 t=29s 	loss=0.248	val_loss=0.235 	 auc=0.883
+Epoch 16/20 	 lr=2.1e-04	 t=22s 	loss=0.246	val_loss=0.224 	 auc=0.889
+Epoch 17/20 	 lr=1.6e-04	 t=22s 	loss=0.237	val_loss=0.236 	 auc=0.891
+Epoch 18/20 	 lr=1.1e-04	 t=22s 	loss=0.236	val_loss=0.229 	 auc=0.891
+Epoch 19/20 	 lr=5.3e-05	 t=22s 	loss=0.236	val_loss=0.247 	 auc=0.892
+Epoch 20/20 	 lr=0.0e+00	 t=22s 	loss=0.229	val_loss=0.234 	 auc=0.892
+
+ -> Saving weights to ../logs_cls/2020-12-11/37/resnet18_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 155072 training images
+    -> 38659 validation images
+    -> 11177025 trainable parameters
+
+Using 157 out of 605 batches by limiting to 20 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=30s 	loss=0.354	val_loss=0.290 	 auc=0.771
+Epoch 02/20 	 lr=9.5e-04	 t=30s 	loss=0.286	val_loss=0.277 	 auc=0.796
+Epoch 03/20 	 lr=8.9e-04	 t=27s 	loss=0.278	val_loss=0.276 	 auc=0.792
+Epoch 04/20 	 lr=8.4e-04	 t=29s 	loss=0.278	val_loss=0.278 	 auc=0.817
+Epoch 05/20 	 lr=7.9e-04	 t=28s 	loss=0.277	val_loss=0.257 	 auc=0.829
+Epoch 06/20 	 lr=7.4e-04	 t=22s 	loss=0.275	val_loss=0.252 	 auc=0.836
+Epoch 07/20 	 lr=6.8e-04	 t=22s 	loss=0.268	val_loss=0.255 	 auc=0.843
+Epoch 08/20 	 lr=6.3e-04	 t=28s 	loss=0.265	val_loss=0.256 	 auc=0.831
+Epoch 09/20 	 lr=5.8e-04	 t=22s 	loss=0.265	val_loss=0.250 	 auc=0.834
+Epoch 10/20 	 lr=5.3e-04	 t=22s 	loss=0.256	val_loss=0.246 	 auc=0.853
+Epoch 11/20 	 lr=4.7e-04	 t=22s 	loss=0.255	val_loss=0.246 	 auc=0.849
+Epoch 12/20 	 lr=4.2e-04	 t=22s 	loss=0.255	val_loss=0.252 	 auc=0.854
+Epoch 13/20 	 lr=3.7e-04	 t=22s 	loss=0.249	val_loss=0.247 	 auc=0.846
+Epoch 14/20 	 lr=3.2e-04	 t=22s 	loss=0.249	val_loss=0.252 	 auc=0.857
+Epoch 15/20 	 lr=2.6e-04	 t=22s 	loss=0.239	val_loss=0.247 	 auc=0.871
+Epoch 16/20 	 lr=2.1e-04	 t=22s 	loss=0.238	val_loss=0.250 	 auc=0.874
+Epoch 17/20 	 lr=1.6e-04	 t=22s 	loss=0.238	val_loss=0.239 	 auc=0.874
+Epoch 18/20 	 lr=1.1e-04	 t=22s 	loss=0.232	val_loss=0.257 	 auc=0.878
+Epoch 19/20 	 lr=5.3e-05	 t=22s 	loss=0.226	val_loss=0.258 	 auc=0.881
+Epoch 20/20 	 lr=0.0e+00	 t=22s 	loss=0.222	val_loss=0.261 	 auc=0.881
+
+ -> Saving weights to ../logs_cls/2020-12-11/37/resnet18_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 154983 training images
+    -> 38748 validation images
+    -> 11177025 trainable parameters
+
+Using 157 out of 605 batches by limiting to 20 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=22s 	loss=0.358	val_loss=0.317 	 auc=0.806
+Epoch 02/20 	 lr=9.5e-04	 t=22s 	loss=0.297	val_loss=0.252 	 auc=0.811
+Epoch 03/20 	 lr=8.9e-04	 t=22s 	loss=0.288	val_loss=0.304 	 auc=0.815
+Epoch 04/20 	 lr=8.4e-04	 t=22s 	loss=0.286	val_loss=0.247 	 auc=0.833
+Epoch 05/20 	 lr=7.9e-04	 t=22s 	loss=0.279	val_loss=0.242 	 auc=0.837
+Epoch 06/20 	 lr=7.4e-04	 t=29s 	loss=0.277	val_loss=0.242 	 auc=0.858
+Epoch 07/20 	 lr=6.8e-04	 t=22s 	loss=0.270	val_loss=0.243 	 auc=0.844
+Epoch 08/20 	 lr=6.3e-04	 t=22s 	loss=0.267	val_loss=0.231 	 auc=0.865
+Epoch 09/20 	 lr=5.8e-04	 t=22s 	loss=0.265	val_loss=0.245 	 auc=0.865
+Epoch 10/20 	 lr=5.3e-04	 t=22s 	loss=0.263	val_loss=0.234 	 auc=0.862
+Epoch 11/20 	 lr=4.7e-04	 t=22s 	loss=0.261	val_loss=0.229 	 auc=0.880
+Epoch 12/20 	 lr=4.2e-04	 t=22s 	loss=0.258	val_loss=0.241 	 auc=0.860
+Epoch 13/20 	 lr=3.7e-04	 t=22s 	loss=0.250	val_loss=0.232 	 auc=0.873
+Epoch 14/20 	 lr=3.2e-04	 t=22s 	loss=0.245	val_loss=0.244 	 auc=0.882
+Epoch 15/20 	 lr=2.6e-04	 t=22s 	loss=0.243	val_loss=0.233 	 auc=0.874
+Epoch 16/20 	 lr=2.1e-04	 t=22s 	loss=0.246	val_loss=0.236 	 auc=0.876
+Epoch 17/20 	 lr=1.6e-04	 t=22s 	loss=0.239	val_loss=0.222 	 auc=0.877
+Epoch 18/20 	 lr=1.1e-04	 t=22s 	loss=0.236	val_loss=0.226 	 auc=0.886
+Epoch 19/20 	 lr=5.3e-05	 t=22s 	loss=0.229	val_loss=0.232 	 auc=0.886
+Epoch 20/20 	 lr=0.0e+00	 t=22s 	loss=0.229	val_loss=0.226 	 auc=0.888
+
+ -> Saving weights to ../logs_cls/2020-12-11/37/resnet18_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 154896 training images
+    -> 38835 validation images
+    -> 11177025 trainable parameters
+
+Using 157 out of 605 batches by limiting to 20 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=23s 	loss=0.361	val_loss=0.283 	 auc=0.762
+Epoch 02/20 	 lr=9.5e-04	 t=22s 	loss=0.288	val_loss=0.320 	 auc=0.811
+Epoch 03/20 	 lr=8.9e-04	 t=22s 	loss=0.284	val_loss=0.269 	 auc=0.816
+Epoch 04/20 	 lr=8.4e-04	 t=22s 	loss=0.275	val_loss=0.279 	 auc=0.814
+Epoch 05/20 	 lr=7.9e-04	 t=22s 	loss=0.276	val_loss=0.264 	 auc=0.823
+Epoch 06/20 	 lr=7.4e-04	 t=22s 	loss=0.274	val_loss=0.258 	 auc=0.827
+Epoch 07/20 	 lr=6.8e-04	 t=22s 	loss=0.267	val_loss=0.279 	 auc=0.829
+Epoch 08/20 	 lr=6.3e-04	 t=22s 	loss=0.263	val_loss=0.256 	 auc=0.842
+Epoch 09/20 	 lr=5.8e-04	 t=22s 	loss=0.261	val_loss=0.258 	 auc=0.857
+Epoch 10/20 	 lr=5.3e-04	 t=22s 	loss=0.259	val_loss=0.283 	 auc=0.847
+Epoch 11/20 	 lr=4.7e-04	 t=22s 	loss=0.260	val_loss=0.251 	 auc=0.846
+Epoch 12/20 	 lr=4.2e-04	 t=22s 	loss=0.254	val_loss=0.255 	 auc=0.847
+Epoch 13/20 	 lr=3.7e-04	 t=22s 	loss=0.251	val_loss=0.247 	 auc=0.854
+Epoch 14/20 	 lr=3.2e-04	 t=22s 	loss=0.248	val_loss=0.265 	 auc=0.851
+Epoch 15/20 	 lr=2.6e-04	 t=22s 	loss=0.243	val_loss=0.245 	 auc=0.861
+Epoch 16/20 	 lr=2.1e-04	 t=22s 	loss=0.239	val_loss=0.241 	 auc=0.867
+Epoch 17/20 	 lr=1.6e-04	 t=22s 	loss=0.237	val_loss=0.250 	 auc=0.864
+Epoch 18/20 	 lr=1.1e-04	 t=22s 	loss=0.231	val_loss=0.253 	 auc=0.861
+Epoch 19/20 	 lr=5.3e-05	 t=40s 	loss=0.231	val_loss=0.253 	 auc=0.863
+Epoch 20/20 	 lr=0.0e+00	 t=23s 	loss=0.226	val_loss=0.252 	 auc=0.865
+
+ -> Saving weights to ../logs_cls/2020-12-11/37/resnet18_3.pt
+
+
+-------------   Fold 5 / 5  -------------
+
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 154990 training images
+    -> 38741 validation images
+    -> 11177025 trainable parameters
+
+Using 158 out of 605 batches by limiting to 20 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=22s 	loss=0.357	val_loss=0.289 	 auc=0.784
+Epoch 02/20 	 lr=9.5e-04	 t=22s 	loss=0.293	val_loss=0.344 	 auc=0.835
+Epoch 03/20 	 lr=8.9e-04	 t=22s 	loss=0.286	val_loss=0.251 	 auc=0.845
+Epoch 04/20 	 lr=8.4e-04	 t=22s 	loss=0.278	val_loss=0.248 	 auc=0.851
+Epoch 05/20 	 lr=7.9e-04	 t=31s 	loss=0.274	val_loss=0.277 	 auc=0.834
+Epoch 06/20 	 lr=7.4e-04	 t=22s 	loss=0.270	val_loss=0.252 	 auc=0.857
+Epoch 07/20 	 lr=6.8e-04	 t=24s 	loss=0.272	val_loss=0.247 	 auc=0.872
+Epoch 08/20 	 lr=6.3e-04	 t=27s 	loss=0.263	val_loss=0.311 	 auc=0.873
+Epoch 09/20 	 lr=5.8e-04	 t=28s 	loss=0.267	val_loss=0.252 	 auc=0.870
+Epoch 10/20 	 lr=5.3e-04	 t=22s 	loss=0.260	val_loss=0.271 	 auc=0.874
+Epoch 11/20 	 lr=4.7e-04	 t=25s 	loss=0.261	val_loss=0.240 	 auc=0.878
+Epoch 12/20 	 lr=4.2e-04	 t=25s 	loss=0.254	val_loss=0.245 	 auc=0.884
+Epoch 13/20 	 lr=3.7e-04	 t=22s 	loss=0.247	val_loss=0.241 	 auc=0.882
+Epoch 14/20 	 lr=3.2e-04	 t=27s 	loss=0.251	val_loss=0.226 	 auc=0.891
+Epoch 15/20 	 lr=2.6e-04	 t=22s 	loss=0.246	val_loss=0.229 	 auc=0.888
+Epoch 16/20 	 lr=2.1e-04	 t=22s 	loss=0.244	val_loss=0.234 	 auc=0.889
+Epoch 17/20 	 lr=1.6e-04	 t=22s 	loss=0.244	val_loss=0.244 	 auc=0.894
+Epoch 18/20 	 lr=1.1e-04	 t=22s 	loss=0.233	val_loss=0.235 	 auc=0.895
+Epoch 19/20 	 lr=5.3e-05	 t=25s 	loss=0.230	val_loss=0.233 	 auc=0.899
+Epoch 20/20 	 lr=0.0e+00	 t=22s 	loss=0.228	val_loss=0.236 	 auc=0.900
+
+ -> Saving weights to ../logs_cls/2020-12-11/37/resnet18_4.pt
+
+
+  -> CV auc : 0.8839

@@ -1,0 +1,51 @@
+
+-------------   Fold 1 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 154983 training images
+    -> 38748 validation images
+    -> 6514465 trainable parameters
+
+Using 158 out of 1210 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=51s 	loss=0.378	val_loss=0.282 	 auc=0.777
+Epoch 02/20 	 lr=9.5e-04	 t=49s 	loss=0.298	val_loss=0.318 	 auc=0.790
+Epoch 03/20 	 lr=8.9e-04	 t=49s 	loss=0.285	val_loss=0.264 	 auc=0.823
+Epoch 04/20 	 lr=8.4e-04	 t=49s 	loss=0.283	val_loss=0.261 	 auc=0.828
+Epoch 05/20 	 lr=7.9e-04	 t=48s 	loss=0.277	val_loss=0.250 	 auc=0.844
+Epoch 06/20 	 lr=7.4e-04	 t=48s 	loss=0.274	val_loss=0.242 	 auc=0.853
+Epoch 07/20 	 lr=6.8e-04	 t=48s 	loss=0.264	val_loss=0.236 	 auc=0.865
+Epoch 08/20 	 lr=6.3e-04	 t=48s 	loss=0.268	val_loss=0.239 	 auc=0.859
+Epoch 09/20 	 lr=5.8e-04	 t=48s 	loss=0.270	val_loss=0.235 	 auc=0.870
+Epoch 10/20 	 lr=5.3e-04	 t=48s 	loss=0.264	val_loss=0.231 	 auc=0.872
+Epoch 11/20 	 lr=4.7e-04	 t=48s 	loss=0.259	val_loss=0.233 	 auc=0.868
+Epoch 12/20 	 lr=4.2e-04	 t=48s 	loss=0.255	val_loss=0.226 	 auc=0.878
+Epoch 13/20 	 lr=3.7e-04	 t=48s 	loss=0.255	val_loss=0.232 	 auc=0.880
+Epoch 14/20 	 lr=3.2e-04	 t=48s 	loss=0.252	val_loss=0.220 	 auc=0.888
+Epoch 15/20 	 lr=2.6e-04	 t=48s 	loss=0.245	val_loss=0.220 	 auc=0.891
+Epoch 16/20 	 lr=2.1e-04	 t=48s 	loss=0.239	val_loss=0.217 	 auc=0.893
+Epoch 17/20 	 lr=1.6e-04	 t=48s 	loss=0.235	val_loss=0.221 	 auc=0.893
+Epoch 18/20 	 lr=1.1e-04	 t=48s 	loss=0.241	val_loss=0.218 	 auc=0.895
+Epoch 19/20 	 lr=5.3e-05	 t=48s 	loss=0.233	val_loss=0.217 	 auc=0.895
+Epoch 20/20 	 lr=0.0e+00	 t=48s 	loss=0.237	val_loss=0.218 	 auc=0.895
+
+ -> Saving weights to ../logs_cls/2020-12-12/6/efficientnet-b1_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 155072 training images
+    -> 38659 validation images
+    -> 6514465 trainable parameters
+
+Using 158 out of 1211 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=49s 	loss=0.371	val_loss=0.382 	 auc=0.776
+Epoch 02/20 	 lr=9.5e-04	 t=48s 	loss=0.292	val_loss=0.285 	 auc=0.800
+Epoch 03/20 	 lr=8.9e-04	 t=48s 	loss=0.291	val_loss=0.263 	 auc=0.833
+Epoch 04/20 	 lr=8.4e-04	 t=48s 	loss=0.283	val_loss=0.268 	 auc=0.837
+Epoch 05/20 	 lr=7.9e-04	 t=48s 	loss=0.280	val_loss=0.262 	 auc=0.822
+Epoch 06/20 	 lr=7.4e-04	 t=48s 	loss=0.271	val_loss=0.257 	 auc=0.837
+Epoch 07/20 	 lr=6.8e-04	 t=48s 	loss=0.271	val_loss=0.248 	 auc=0.847
+Epoch 08/20 	 lr=6.3e-04	 t=48s 	loss=0.267	val_loss=0.241 	 auc=0.855

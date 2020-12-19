@@ -1,0 +1,20 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 8012 training images
+    -> 2005 validation images
+    -> 20545475 trainable parameters
+
+Epoch 01/07 	 lr=9.0e-04	 t=661s	loss=64.195	f1_scores : 0.0000 - 0.0647 - 0.0000
+Epoch 02/07 	 lr=7.5e-04	 t=662s	loss=0.610	f1_scores : 0.0127 - 0.1134 - 0.0127
+Epoch 03/07 	 lr=6.0e-04	 t=667s	loss=0.535	f1_scores : 0.0474 - 0.1287 - 0.0474
+Epoch 04/07 	 lr=4.5e-04	 t=659s	loss=0.487	f1_scores : 0.0245 - 0.1425 - 0.0245
+Epoch 05/07 	 lr=3.0e-04	 t=660s	loss=0.434	f1_scores : 0.0561 - 0.1507 - 0.0561
+Epoch 06/07 	 lr=1.5e-04	 t=664s	loss=0.393	f1_scores : 0.1442 - 0.1822 - 0.1471
+Epoch 07/07 	 lr=0.0e+00	 t=661s	loss=0.350	f1_scores : 0.1614 - 0.1836 - 0.1607
+
+ -> Saving weights to ../logs/2020-12-09/12/tf_efficientdet_d4_0.pt
+
+The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+/home/theo/kaggle/nfl_impact/src

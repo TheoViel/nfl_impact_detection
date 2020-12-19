@@ -1,0 +1,43 @@
+
+-------------   Fold 1 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b0
+    -> 154983 training images
+    -> 38748 validation images
+    -> 4008829 trainable parameters
+
+Using 157 out of 605 batches by limiting to 20 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=55s 	loss=0.371	val_loss=0.261 	 auc=0.832
+Epoch 02/20 	 lr=9.5e-04	 t=54s 	loss=0.289	val_loss=0.267 	 auc=0.853
+Epoch 03/20 	 lr=8.9e-04	 t=54s 	loss=0.271	val_loss=0.255 	 auc=0.836
+Epoch 04/20 	 lr=8.4e-04	 t=54s 	loss=0.270	val_loss=0.264 	 auc=0.864
+Epoch 05/20 	 lr=7.9e-04	 t=54s 	loss=0.262	val_loss=0.252 	 auc=0.860
+Epoch 06/20 	 lr=7.4e-04	 t=54s 	loss=0.259	val_loss=0.249 	 auc=0.868
+Epoch 07/20 	 lr=6.8e-04	 t=54s 	loss=0.254	val_loss=0.228 	 auc=0.878
+Epoch 08/20 	 lr=6.3e-04	 t=54s 	loss=0.250	val_loss=0.227 	 auc=0.879
+Epoch 09/20 	 lr=5.8e-04	 t=54s 	loss=0.249	val_loss=0.249 	 auc=0.869
+Epoch 10/20 	 lr=5.3e-04	 t=54s 	loss=0.243	val_loss=0.245 	 auc=0.880
+Epoch 11/20 	 lr=4.7e-04	 t=54s 	loss=0.242	val_loss=0.241 	 auc=0.879
+Epoch 12/20 	 lr=4.2e-04	 t=54s 	loss=0.233	val_loss=0.230 	 auc=0.879
+Epoch 13/20 	 lr=3.7e-04	 t=54s 	loss=0.231	val_loss=0.233 	 auc=0.880
+Epoch 14/20 	 lr=3.2e-04	 t=54s 	loss=0.229	val_loss=0.244 	 auc=0.886
+Epoch 15/20 	 lr=2.6e-04	 t=54s 	loss=0.223	val_loss=0.262 	 auc=0.879
+Epoch 16/20 	 lr=2.1e-04	 t=54s 	loss=0.219	val_loss=0.243 	 auc=0.888
+Epoch 17/20 	 lr=1.6e-04	 t=54s 	loss=0.212	val_loss=0.245 	 auc=0.887
+Epoch 18/20 	 lr=1.1e-04	 t=54s 	loss=0.211	val_loss=0.244 	 auc=0.888
+Epoch 19/20 	 lr=5.3e-05	 t=57s 	loss=0.205	val_loss=0.245 	 auc=0.888
+Epoch 20/20 	 lr=0.0e+00	 t=57s 	loss=0.209	val_loss=0.245 	 auc=0.888
+
+ -> Saving weights to ../logs_cls/2020-12-12/4/efficientnet-b0_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b0
+    -> 155072 training images
+    -> 38659 validation images
+    -> 4008829 trainable parameters
+
+Using 157 out of 605 batches by limiting to 20 samples per player.
+

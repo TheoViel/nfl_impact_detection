@@ -1,0 +1,69 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 41301 training images
+    -> 10841 validation images
+    -> 20543450 trainable parameters
+
+Epoch 01/15 	 lr=4.9e-04	 t=3445s	loss=16.902	scores : 0.8289 - 0.6422 - 0.2067
+Epoch 02/15 	 lr=4.6e-04	 t=3474s	loss=0.407	scores : 0.8800 - 0.7822 - 0.4133
+Epoch 03/15 	 lr=4.2e-04	 t=3487s	loss=0.354	scores : 0.8844 - 0.8133 - 0.5622
+Epoch 04/15 	 lr=3.9e-04	 t=3487s	loss=0.324	scores : 0.8889 - 0.8356 - 0.6200
+Epoch 05/15 	 lr=3.5e-04	 t=3453s	loss=0.304	scores : 0.8844 - 0.8311 - 0.5556
+Epoch 06/15 	 lr=3.2e-04	 t=3489s	loss=0.290	scores : 0.8867 - 0.8489 - 0.6067
+Epoch 07/15 	 lr=2.8e-04	 t=3503s	loss=0.279	scores : 0.8889 - 0.8333 - 0.6400
+Epoch 08/15 	 lr=2.5e-04	 t=3490s	loss=0.269	scores : 0.8889 - 0.8333 - 0.6444
+Epoch 09/15 	 lr=2.1e-04	 t=3465s	loss=0.261	scores : 0.8978 - 0.8422 - 0.6600
+Epoch 10/15 	 lr=1.8e-04	 t=3456s	loss=0.253	scores : 0.8822 - 0.8378 - 0.6622
+Epoch 11/15 	 lr=1.4e-04	 t=3469s	loss=0.246	scores : 0.8822 - 0.8467 - 0.6911
+Epoch 12/15 	 lr=1.1e-04	 t=3452s	loss=0.241	scores : 0.8956 - 0.8444 - 0.6911
+Epoch 13/15 	 lr=7.0e-05	 t=3506s	loss=0.234	scores : 0.8978 - 0.8600 - 0.7111
+Epoch 14/15 	 lr=3.5e-05	 t=3502s	loss=0.230	scores : 0.8956 - 0.8689 - 0.6978
+Epoch 15/15 	 lr=0.0e+00	 t=3497s	loss=0.225	scores : 0.9022 - 0.8667 - 0.7200
+
+ -> Saving weights to ../logs/2020-12-15/0/tf_efficientdet_d4_0.pt
+
+Detected 0 / 2 helmets with impacts
+Detected 0 / 2 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 4 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 2 helmets with impacts
+
+Detected 0 / 2 helmets with impacts
+Detected 0 / 2 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 4 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 2 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 2 helmets with impacts
+Detected 0 / 2 helmets with impacts
+
+Detected 0 / 2 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 2 / 4 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 2 / 3 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 0 / 2 helmets with impacts
+Detected 0 / 1 helmets with impacts
+Detected 1 / 2 helmets with impacts
+Detected 0 / 2 helmets with impacts
+Detected 1 / 2 helmets with impacts
+

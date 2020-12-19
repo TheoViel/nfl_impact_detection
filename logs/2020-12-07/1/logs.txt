@@ -1,0 +1,27 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 8012 training images
+    -> 2005 validation images
+    -> 3828587 trainable parameters
+
+Epoch 01/20 	 lr=1.0e-03	 t=194s	loss=1270.664	
+Epoch 02/20 	 lr=9.5e-04	 t=193s	loss=3.383	
+Epoch 03/20 	 lr=8.9e-04	 t=193s	loss=1.921	
+Epoch 04/20 	 lr=8.4e-04	 t=195s	loss=1.484	
+Epoch 05/20 	 lr=7.9e-04	 t=216s	loss=1.205	helmet_f1_score=0.1043 	impact_f1_score=0.0057
+Epoch 06/20 	 lr=7.4e-04	 t=221s	loss=1.020	helmet_f1_score=0.2020 	impact_f1_score=0.0056
+Epoch 07/20 	 lr=6.8e-04	 t=226s	loss=0.904	helmet_f1_score=0.2633 	impact_f1_score=0.0249
+Epoch 08/20 	 lr=6.3e-04	 t=232s	loss=0.823	helmet_f1_score=0.3938 	impact_f1_score=0.0511
+Epoch 09/20 	 lr=5.8e-04	 t=225s	loss=0.764	helmet_f1_score=0.2848 	impact_f1_score=0.0283
+Epoch 10/20 	 lr=5.3e-04	 t=228s	loss=0.714	helmet_f1_score=0.3409 	impact_f1_score=0.0316
+Epoch 11/20 	 lr=4.7e-04	 t=229s	loss=0.672	helmet_f1_score=0.3735 	impact_f1_score=0.0518
+Epoch 12/20 	 lr=4.2e-04	 t=235s	loss=0.631	helmet_f1_score=0.4225 	impact_f1_score=0.0653
+Epoch 13/20 	 lr=3.7e-04	 t=233s	loss=0.594	helmet_f1_score=0.4200 	impact_f1_score=0.0794
+Epoch 14/20 	 lr=3.2e-04	 t=235s	loss=0.562	helmet_f1_score=0.4332 	impact_f1_score=0.0635
+Epoch 15/20 	 lr=2.6e-04	 t=236s	loss=0.526	helmet_f1_score=0.4386 	impact_f1_score=0.0596
+Epoch 16/20 	 lr=2.1e-04	 t=234s	loss=0.499	helmet_f1_score=0.4473 	impact_f1_score=0.0745
+Epoch 17/20 	 lr=1.6e-04	 t=237s	loss=0.468	helmet_f1_score=0.4835 	impact_f1_score=0.0886
+Epoch 18/20 	 lr=1.1e-04	 t=241s	loss=0.438	helmet_f1_score=0.4939 	impact_f1_score=0.1018
+Epoch 19/20 	 lr=5.3e-05	 t=237s	loss=0.415	helmet_f1_score=0.4930 	impact_f1_score=0.0948
+Epoch 20/20 	 lr=0.0e+00	 t=242s	loss=0.393	helmet_f1_score=0.5129 	impact_f1_score=0.1076

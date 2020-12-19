@@ -1,0 +1,9 @@
+
+-------------   Fold 1 / 5  -------------
+
+/home/theo/venv/lib/python3.8/site-packages/albumentations/augmentations/transforms.py:2610: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+    -> 8012 training images
+    -> 2005 validation images
+    -> 20545475 trainable parameters
+

@@ -1,0 +1,20 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 8012 training images
+    -> 2005 validation images
+    -> 20545475 trainable parameters
+
+Epoch 01/10 	 lr=9.5e-04	 t=658s	loss=78.969	f1_scores : 0.0000 - 0.0222 - 0.0000
+Epoch 02/10 	 lr=8.4e-04	 t=657s	loss=0.609	f1_scores : 0.0000 - 0.1248 - 0.0000
+Epoch 03/10 	 lr=7.4e-04	 t=661s	loss=0.536	f1_scores : 0.0203 - 0.1414 - 0.0203
+Epoch 04/10 	 lr=6.3e-04	 t=658s	loss=0.493	f1_scores : 0.0043 - 0.1444 - 0.0043
+Epoch 05/10 	 lr=5.3e-04	 t=656s	loss=0.453	f1_scores : 0.0821 - 0.1455 - 0.0821
+Epoch 06/10 	 lr=4.2e-04	 t=657s	loss=0.417	f1_scores : 0.1471 - 0.1531 - 0.1468
+Epoch 07/10 	 lr=3.2e-04	 t=659s	loss=0.388	f1_scores : 0.1333 - 0.1550 - 0.1340
+Epoch 08/10 	 lr=2.1e-04	 t=652s	loss=0.354	f1_scores : 0.1243 - 0.1746 - 0.1228
+Epoch 09/10 	 lr=1.1e-04	 t=651s	loss=0.326	f1_scores : 0.1477 - 0.1601 - 0.1506
+Epoch 10/10 	 lr=0.0e+00	 t=653s	loss=0.301	f1_scores : 0.1449 - 0.1634 - 0.1412
+
+ -> Saving weights to ../logs/2020-12-09/10/tf_efficientdet_d4_0.pt
+

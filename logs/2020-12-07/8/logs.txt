@@ -1,0 +1,16 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 8012 training images
+    -> 2005 validation images
+    -> 20545475 trainable parameters
+
+1
+3
+5
+7
+9
+11
+13
+15
+17

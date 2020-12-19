@@ -1,0 +1,10 @@
+
+-------------   Fold 1 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 154983 training images
+    -> 38748 validation images
+    -> 6514465 trainable parameters
+
+Using 157 out of 605 batches by limiting to 20 samples per player.
+

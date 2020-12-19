@@ -1,0 +1,2 @@
+seed,verbose,img_path,device,save_weights,k,random_state,selected_folds,name,num_classes,optimizer,batch_size,acc_steps,epochs,swa_first_epoch,lr,warmup_prop,val_bs,first_epoch_eval
+42,1,../../../data/nfl_512/,cuda,True,5,0,0,tf_efficientdet_d4,2,AdamW,4,1,2,20,0.0005,0.05,8,1

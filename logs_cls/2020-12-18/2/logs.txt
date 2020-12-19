@@ -1,0 +1,177 @@
+
+-------------   Fold 1 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 154983 training images
+    -> 38748 validation images
+    -> 6519589 trainable parameters
+
+Using 158 out of 1210 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=49s 	loss=0.947	val_loss=0.637 	 auc=0.807	 aucs_aux=[0.804, 0.8, 0.793, 0.559]
+Epoch 02/20 	 lr=9.5e-04	 t=48s 	loss=0.677	val_loss=0.598 	 auc=0.817	 aucs_aux=[0.8, 0.787, 0.806, 0.929]
+Epoch 03/20 	 lr=8.9e-04	 t=48s 	loss=0.653	val_loss=0.565 	 auc=0.852	 aucs_aux=[0.852, 0.853, 0.82, 0.975]
+Epoch 04/20 	 lr=8.4e-04	 t=48s 	loss=0.646	val_loss=0.588 	 auc=0.859	 aucs_aux=[0.859, 0.863, 0.822, 0.997]
+Epoch 05/20 	 lr=7.9e-04	 t=48s 	loss=0.641	val_loss=0.570 	 auc=0.849	 aucs_aux=[0.846, 0.857, 0.802, 0.967]
+Epoch 06/20 	 lr=7.4e-04	 t=48s 	loss=0.620	val_loss=0.524 	 auc=0.874	 aucs_aux=[0.874, 0.882, 0.825, 0.998]
+Epoch 07/20 	 lr=6.8e-04	 t=48s 	loss=0.608	val_loss=0.537 	 auc=0.863	 aucs_aux=[0.863, 0.872, 0.812, 0.996]
+Epoch 08/20 	 lr=6.3e-04	 t=48s 	loss=0.609	val_loss=0.561 	 auc=0.860	 aucs_aux=[0.86, 0.864, 0.812, 0.997]
+Epoch 09/20 	 lr=5.8e-04	 t=48s 	loss=0.596	val_loss=0.511 	 auc=0.875	 aucs_aux=[0.875, 0.881, 0.828, 0.998]
+Epoch 10/20 	 lr=5.3e-04	 t=48s 	loss=0.590	val_loss=0.524 	 auc=0.875	 aucs_aux=[0.875, 0.879, 0.834, 0.998]
+Epoch 11/20 	 lr=4.7e-04	 t=48s 	loss=0.581	val_loss=0.554 	 auc=0.865	 aucs_aux=[0.864, 0.869, 0.822, 0.995]
+Epoch 12/20 	 lr=4.2e-04	 t=48s 	loss=0.571	val_loss=0.528 	 auc=0.878	 aucs_aux=[0.878, 0.881, 0.829, 0.995]
+Epoch 13/20 	 lr=3.7e-04	 t=48s 	loss=0.560	val_loss=0.563 	 auc=0.867	 aucs_aux=[0.866, 0.873, 0.821, 0.995]
+Epoch 14/20 	 lr=3.2e-04	 t=48s 	loss=0.576	val_loss=0.512 	 auc=0.874	 aucs_aux=[0.874, 0.883, 0.82, 0.989]
+Epoch 15/20 	 lr=2.6e-04	 t=48s 	loss=0.542	val_loss=0.521 	 auc=0.881	 aucs_aux=[0.88, 0.892, 0.826, 0.992]
+Epoch 16/20 	 lr=2.1e-04	 t=48s 	loss=0.546	val_loss=0.510 	 auc=0.886	 aucs_aux=[0.886, 0.895, 0.835, 0.989]
+Epoch 17/20 	 lr=1.6e-04	 t=48s 	loss=0.530	val_loss=0.514 	 auc=0.889	 aucs_aux=[0.889, 0.898, 0.84, 0.994]
+Epoch 18/20 	 lr=1.1e-04	 t=48s 	loss=0.519	val_loss=0.506 	 auc=0.891	 aucs_aux=[0.891, 0.899, 0.842, 0.994]
+Epoch 19/20 	 lr=5.3e-05	 t=48s 	loss=0.524	val_loss=0.512 	 auc=0.891	 aucs_aux=[0.891, 0.899, 0.843, 0.995]
+Epoch 20/20 	 lr=0.0e+00	 t=48s 	loss=0.529	val_loss=0.511 	 auc=0.891	 aucs_aux=[0.891, 0.9, 0.843, 0.995]
+
+ -> Saving weights to ../logs_cls/2020-12-18/2/efficientnet-b1_0.pt
+
+
+ - Predicting on full data.
+
+-------------   Fold 2 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 155072 training images
+    -> 38659 validation images
+    -> 6519589 trainable parameters
+
+Using 158 out of 1211 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=48s 	loss=0.933	val_loss=0.664 	 auc=0.768	 aucs_aux=[0.765, 0.761, 0.762, 0.687]
+Epoch 02/20 	 lr=9.5e-04	 t=48s 	loss=0.660	val_loss=0.698 	 auc=0.797	 aucs_aux=[0.797, 0.802, 0.765, 0.834]
+Epoch 03/20 	 lr=8.9e-04	 t=48s 	loss=0.634	val_loss=0.597 	 auc=0.826	 aucs_aux=[0.825, 0.846, 0.78, 0.954]
+Epoch 04/20 	 lr=8.4e-04	 t=48s 	loss=0.630	val_loss=0.594 	 auc=0.832	 aucs_aux=[0.831, 0.844, 0.78, 0.839]
+Epoch 05/20 	 lr=7.9e-04	 t=48s 	loss=0.594	val_loss=0.580 	 auc=0.850	 aucs_aux=[0.851, 0.86, 0.791, 0.984]
+Epoch 06/20 	 lr=7.4e-04	 t=48s 	loss=0.608	val_loss=0.566 	 auc=0.841	 aucs_aux=[0.841, 0.854, 0.759, 0.968]
+Epoch 07/20 	 lr=6.8e-04	 t=48s 	loss=0.605	val_loss=0.572 	 auc=0.837	 aucs_aux=[0.836, 0.849, 0.776, 0.962]
+Epoch 08/20 	 lr=6.3e-04	 t=48s 	loss=0.584	val_loss=0.576 	 auc=0.845	 aucs_aux=[0.845, 0.849, 0.794, 0.984]
+Epoch 09/20 	 lr=5.8e-04	 t=48s 	loss=0.575	val_loss=0.585 	 auc=0.836	 aucs_aux=[0.836, 0.835, 0.793, 0.982]
+Epoch 10/20 	 lr=5.3e-04	 t=48s 	loss=0.567	val_loss=0.525 	 auc=0.868	 aucs_aux=[0.868, 0.88, 0.799, 0.987]
+Epoch 11/20 	 lr=4.7e-04	 t=48s 	loss=0.556	val_loss=0.592 	 auc=0.849	 aucs_aux=[0.849, 0.855, 0.797, 0.982]
+Epoch 12/20 	 lr=4.2e-04	 t=48s 	loss=0.561	val_loss=0.533 	 auc=0.864	 aucs_aux=[0.864, 0.875, 0.801, 0.988]
+Epoch 13/20 	 lr=3.7e-04	 t=48s 	loss=0.557	val_loss=0.571 	 auc=0.853	 aucs_aux=[0.853, 0.863, 0.785, 0.979]
+Epoch 14/20 	 lr=3.2e-04	 t=48s 	loss=0.538	val_loss=0.544 	 auc=0.863	 aucs_aux=[0.863, 0.873, 0.802, 0.986]
+Epoch 15/20 	 lr=2.6e-04	 t=48s 	loss=0.544	val_loss=0.545 	 auc=0.863	 aucs_aux=[0.863, 0.867, 0.81, 0.99]
+Epoch 16/20 	 lr=2.1e-04	 t=48s 	loss=0.536	val_loss=0.536 	 auc=0.868	 aucs_aux=[0.868, 0.872, 0.814, 0.991]
+Epoch 17/20 	 lr=1.6e-04	 t=48s 	loss=0.525	val_loss=0.533 	 auc=0.871	 aucs_aux=[0.871, 0.876, 0.815, 0.99]
+Epoch 18/20 	 lr=1.1e-04	 t=48s 	loss=0.519	val_loss=0.534 	 auc=0.871	 aucs_aux=[0.871, 0.877, 0.812, 0.99]
+Epoch 19/20 	 lr=5.3e-05	 t=48s 	loss=0.522	val_loss=0.534 	 auc=0.873	 aucs_aux=[0.873, 0.879, 0.812, 0.989]
+Epoch 20/20 	 lr=0.0e+00	 t=48s 	loss=0.514	val_loss=0.535 	 auc=0.873	 aucs_aux=[0.873, 0.879, 0.811, 0.988]
+
+ -> Saving weights to ../logs_cls/2020-12-18/2/efficientnet-b1_1.pt
+
+
+ - Predicting on full data.
+
+-------------   Fold 3 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 154983 training images
+    -> 38748 validation images
+    -> 6519589 trainable parameters
+
+Using 158 out of 1210 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=48s 	loss=0.946	val_loss=0.613 	 auc=0.800	 aucs_aux=[0.804, 0.799, 0.764, 0.929]
+Epoch 02/20 	 lr=9.5e-04	 t=48s 	loss=0.659	val_loss=0.625 	 auc=0.827	 aucs_aux=[0.828, 0.832, 0.788, 0.962]
+Epoch 03/20 	 lr=8.9e-04	 t=48s 	loss=0.650	val_loss=0.634 	 auc=0.841	 aucs_aux=[0.841, 0.845, 0.773, 0.953]
+Epoch 04/20 	 lr=8.4e-04	 t=48s 	loss=0.622	val_loss=0.667 	 auc=0.853	 aucs_aux=[0.853, 0.855, 0.798, 0.963]
+Epoch 05/20 	 lr=7.9e-04	 t=48s 	loss=0.629	val_loss=0.620 	 auc=0.853	 aucs_aux=[0.855, 0.86, 0.8, 0.967]
+Epoch 06/20 	 lr=7.4e-04	 t=48s 	loss=0.608	val_loss=0.537 	 auc=0.848	 aucs_aux=[0.847, 0.845, 0.818, 0.971]
+Epoch 07/20 	 lr=6.8e-04	 t=48s 	loss=0.601	val_loss=0.710 	 auc=0.864	 aucs_aux=[0.863, 0.869, 0.766, 0.98]
+Epoch 08/20 	 lr=6.3e-04	 t=48s 	loss=0.602	val_loss=0.548 	 auc=0.859	 aucs_aux=[0.857, 0.859, 0.821, 0.98]
+Epoch 09/20 	 lr=5.8e-04	 t=48s 	loss=0.586	val_loss=0.549 	 auc=0.872	 aucs_aux=[0.871, 0.877, 0.821, 0.962]
+Epoch 10/20 	 lr=5.3e-04	 t=48s 	loss=0.578	val_loss=0.509 	 auc=0.869	 aucs_aux=[0.869, 0.87, 0.824, 0.983]
+Epoch 11/20 	 lr=4.7e-04	 t=48s 	loss=0.569	val_loss=0.532 	 auc=0.871	 aucs_aux=[0.87, 0.877, 0.815, 0.968]
+Epoch 12/20 	 lr=4.2e-04	 t=48s 	loss=0.572	val_loss=0.513 	 auc=0.878	 aucs_aux=[0.877, 0.878, 0.821, 0.953]
+Epoch 13/20 	 lr=3.7e-04	 t=48s 	loss=0.567	val_loss=0.536 	 auc=0.874	 aucs_aux=[0.874, 0.874, 0.832, 0.958]
+Epoch 14/20 	 lr=3.2e-04	 t=48s 	loss=0.571	val_loss=0.500 	 auc=0.881	 aucs_aux=[0.88, 0.882, 0.827, 0.973]
+Epoch 15/20 	 lr=2.6e-04	 t=48s 	loss=0.544	val_loss=0.509 	 auc=0.879	 aucs_aux=[0.878, 0.878, 0.835, 0.977]
+Epoch 16/20 	 lr=2.1e-04	 t=48s 	loss=0.544	val_loss=0.495 	 auc=0.887	 aucs_aux=[0.886, 0.889, 0.835, 0.984]
+Epoch 17/20 	 lr=1.6e-04	 t=48s 	loss=0.533	val_loss=0.496 	 auc=0.889	 aucs_aux=[0.888, 0.892, 0.834, 0.984]
+Epoch 18/20 	 lr=1.1e-04	 t=48s 	loss=0.525	val_loss=0.502 	 auc=0.888	 aucs_aux=[0.888, 0.892, 0.831, 0.982]
+Epoch 19/20 	 lr=5.3e-05	 t=48s 	loss=0.530	val_loss=0.508 	 auc=0.888	 aucs_aux=[0.888, 0.892, 0.83, 0.982]
+Epoch 20/20 	 lr=0.0e+00	 t=48s 	loss=0.537	val_loss=0.511 	 auc=0.888	 aucs_aux=[0.888, 0.892, 0.831, 0.982]
+
+ -> Saving weights to ../logs_cls/2020-12-18/2/efficientnet-b1_2.pt
+
+
+ - Predicting on full data.
+
+-------------   Fold 4 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 154896 training images
+    -> 38835 validation images
+    -> 6519589 trainable parameters
+
+Using 158 out of 1210 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=51s 	loss=0.952	val_loss=0.625 	 auc=0.798	 aucs_aux=[0.792, 0.786, 0.78, 0.784]
+Epoch 02/20 	 lr=9.5e-04	 t=48s 	loss=0.656	val_loss=0.626 	 auc=0.823	 aucs_aux=[0.82, 0.821, 0.788, 0.911]
+Epoch 03/20 	 lr=8.9e-04	 t=48s 	loss=0.643	val_loss=0.610 	 auc=0.805	 aucs_aux=[0.804, 0.811, 0.782, 0.931]
+Epoch 04/20 	 lr=8.4e-04	 t=48s 	loss=0.632	val_loss=0.586 	 auc=0.832	 aucs_aux=[0.831, 0.83, 0.805, 0.937]
+Epoch 05/20 	 lr=7.9e-04	 t=48s 	loss=0.635	val_loss=0.581 	 auc=0.836	 aucs_aux=[0.836, 0.84, 0.803, 0.937]
+Epoch 06/20 	 lr=7.4e-04	 t=48s 	loss=0.601	val_loss=0.593 	 auc=0.832	 aucs_aux=[0.831, 0.834, 0.795, 0.964]
+Epoch 07/20 	 lr=6.8e-04	 t=48s 	loss=0.602	val_loss=0.634 	 auc=0.841	 aucs_aux=[0.84, 0.834, 0.814, 0.966]
+Epoch 08/20 	 lr=6.3e-04	 t=48s 	loss=0.591	val_loss=0.591 	 auc=0.851	 aucs_aux=[0.85, 0.854, 0.793, 0.936]
+Epoch 09/20 	 lr=5.8e-04	 t=48s 	loss=0.578	val_loss=0.599 	 auc=0.856	 aucs_aux=[0.855, 0.862, 0.806, 0.971]
+Epoch 10/20 	 lr=5.3e-04	 t=48s 	loss=0.581	val_loss=0.581 	 auc=0.861	 aucs_aux=[0.861, 0.864, 0.823, 0.966]
+Epoch 11/20 	 lr=4.7e-04	 t=48s 	loss=0.573	val_loss=0.542 	 auc=0.864	 aucs_aux=[0.864, 0.864, 0.827, 0.958]
+Epoch 12/20 	 lr=4.2e-04	 t=48s 	loss=0.568	val_loss=0.556 	 auc=0.857	 aucs_aux=[0.857, 0.856, 0.826, 0.97]
+Epoch 13/20 	 lr=3.7e-04	 t=48s 	loss=0.561	val_loss=0.548 	 auc=0.862	 aucs_aux=[0.861, 0.865, 0.816, 0.959]
+Epoch 14/20 	 lr=3.2e-04	 t=48s 	loss=0.566	val_loss=0.563 	 auc=0.869	 aucs_aux=[0.868, 0.873, 0.823, 0.98]
+Epoch 15/20 	 lr=2.6e-04	 t=48s 	loss=0.531	val_loss=0.557 	 auc=0.863	 aucs_aux=[0.863, 0.87, 0.825, 0.977]
+Epoch 16/20 	 lr=2.1e-04	 t=48s 	loss=0.558	val_loss=0.555 	 auc=0.869	 aucs_aux=[0.869, 0.874, 0.833, 0.97]
+Epoch 17/20 	 lr=1.6e-04	 t=48s 	loss=0.522	val_loss=0.545 	 auc=0.871	 aucs_aux=[0.871, 0.876, 0.834, 0.973]
+Epoch 18/20 	 lr=1.1e-04	 t=48s 	loss=0.535	val_loss=0.548 	 auc=0.870	 aucs_aux=[0.87, 0.876, 0.832, 0.971]
+Epoch 19/20 	 lr=5.3e-05	 t=48s 	loss=0.516	val_loss=0.550 	 auc=0.870	 aucs_aux=[0.87, 0.876, 0.833, 0.973]
+Epoch 20/20 	 lr=0.0e+00	 t=48s 	loss=0.501	val_loss=0.549 	 auc=0.870	 aucs_aux=[0.87, 0.876, 0.833, 0.974]
+
+ -> Saving weights to ../logs_cls/2020-12-18/2/efficientnet-b1_3.pt
+
+
+ - Predicting on full data.
+
+-------------   Fold 5 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 154990 training images
+    -> 38741 validation images
+    -> 6519589 trainable parameters
+
+Using 159 out of 1210 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=48s 	loss=0.935	val_loss=0.720 	 auc=0.803	 aucs_aux=[0.802, 0.772, 0.819, 0.863]
+Epoch 02/20 	 lr=9.5e-04	 t=48s 	loss=0.677	val_loss=0.671 	 auc=0.832	 aucs_aux=[0.827, 0.847, 0.787, 0.952]
+Epoch 03/20 	 lr=8.9e-04	 t=48s 	loss=0.636	val_loss=0.602 	 auc=0.847	 aucs_aux=[0.847, 0.839, 0.823, 0.984]
+Epoch 04/20 	 lr=8.4e-04	 t=48s 	loss=0.627	val_loss=0.569 	 auc=0.865	 aucs_aux=[0.865, 0.876, 0.814, 0.986]
+Epoch 05/20 	 lr=7.9e-04	 t=48s 	loss=0.632	val_loss=0.552 	 auc=0.876	 aucs_aux=[0.876, 0.876, 0.847, 0.988]
+Epoch 06/20 	 lr=7.4e-04	 t=48s 	loss=0.608	val_loss=0.567 	 auc=0.863	 aucs_aux=[0.862, 0.871, 0.831, 0.991]
+Epoch 07/20 	 lr=6.8e-04	 t=48s 	loss=0.600	val_loss=0.565 	 auc=0.865	 aucs_aux=[0.865, 0.859, 0.84, 0.995]
+Epoch 08/20 	 lr=6.3e-04	 t=48s 	loss=0.608	val_loss=0.555 	 auc=0.870	 aucs_aux=[0.87, 0.866, 0.842, 0.99]
+Epoch 09/20 	 lr=5.8e-04	 t=48s 	loss=0.592	val_loss=0.542 	 auc=0.877	 aucs_aux=[0.877, 0.887, 0.829, 0.991]
+Epoch 10/20 	 lr=5.3e-04	 t=48s 	loss=0.586	val_loss=0.540 	 auc=0.881	 aucs_aux=[0.88, 0.884, 0.841, 0.992]
+Epoch 11/20 	 lr=4.7e-04	 t=48s 	loss=0.566	val_loss=0.558 	 auc=0.882	 aucs_aux=[0.881, 0.893, 0.833, 0.993]
+Epoch 12/20 	 lr=4.2e-04	 t=48s 	loss=0.581	val_loss=0.553 	 auc=0.877	 aucs_aux=[0.877, 0.872, 0.851, 0.995]
+Epoch 13/20 	 lr=3.7e-04	 t=48s 	loss=0.566	val_loss=0.576 	 auc=0.887	 aucs_aux=[0.887, 0.896, 0.846, 0.991]
+Epoch 14/20 	 lr=3.2e-04	 t=48s 	loss=0.542	val_loss=0.562 	 auc=0.891	 aucs_aux=[0.891, 0.897, 0.839, 0.995]
+Epoch 15/20 	 lr=2.6e-04	 t=48s 	loss=0.535	val_loss=0.549 	 auc=0.886	 aucs_aux=[0.886, 0.887, 0.853, 0.99]
+Epoch 16/20 	 lr=2.1e-04	 t=48s 	loss=0.549	val_loss=0.527 	 auc=0.892	 aucs_aux=[0.892, 0.896, 0.853, 0.994]
+Epoch 17/20 	 lr=1.6e-04	 t=48s 	loss=0.526	val_loss=0.522 	 auc=0.894	 aucs_aux=[0.893, 0.898, 0.855, 0.995]
+Epoch 18/20 	 lr=1.1e-04	 t=48s 	loss=0.529	val_loss=0.531 	 auc=0.893	 aucs_aux=[0.893, 0.898, 0.852, 0.995]
+Epoch 19/20 	 lr=5.3e-05	 t=48s 	loss=0.515	val_loss=0.533 	 auc=0.893	 aucs_aux=[0.893, 0.897, 0.852, 0.995]
+Epoch 20/20 	 lr=0.0e+00	 t=48s 	loss=0.517	val_loss=0.537 	 auc=0.893	 aucs_aux=[0.893, 0.898, 0.85, 0.995]
+
+ -> Saving weights to ../logs_cls/2020-12-18/2/efficientnet-b1_4.pt
+
+
+ - Predicting on full data.
+
+  -> CV auc : 0.8958
