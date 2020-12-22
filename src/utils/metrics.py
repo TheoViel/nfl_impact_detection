@@ -3,8 +3,13 @@ from scipy.optimize import linear_sum_assignment
 
 
 def get_boxes_from_df(df, videos):
-    cols = ["frame", "video", "x", "w", "y", "h"]
-    df = df[cols].groupby("video").agg(list)
+    try:
+        cols = ["frame", "video", "x", "w", "y", "h"]
+        df = df[cols].groupby("video").agg(list)
+    except KeyError:
+        cols = ["frame", "video", "left", "width", "top", "height"]
+        df = df[cols].groupby("video").agg(list)
+
     boxes = []
 
     for video in videos:
