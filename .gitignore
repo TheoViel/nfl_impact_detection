@@ -7,6 +7,6 @@ __pycache__
 *.pkl
 *.json
 *.npy
-input/
-data/
-dataset/
+/input/
+/data/
+/dataset/
