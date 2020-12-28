@@ -40,14 +40,14 @@ def predict_cls(
             y_pred, y_pred_aux = model(images)
 
             y_pred = torch.sigmoid(y_pred).view(-1)
-
-            y_pred_aux = (
-                y_pred_aux.sigmoid()
-                if aux_mode == "sigmoid"
-                else y_pred_aux.softmax(-1)
-            )
-
             preds = np.concatenate([preds, y_pred.detach().cpu().numpy()])
-            preds_aux = np.concatenate([preds_aux, y_pred_aux.detach().cpu().numpy()])
+
+            if num_classes_aux:
+                y_pred_aux = (
+                    y_pred_aux.sigmoid()
+                    if aux_mode == "sigmoid"
+                    else y_pred_aux.softmax(-1)
+                )
+                preds_aux = np.concatenate([preds_aux, y_pred_aux.detach().cpu().numpy()])
 
     return preds, preds_aux

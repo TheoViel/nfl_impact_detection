@@ -1,0 +1,8 @@
+
+-------------   Fold 1 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b3
+    -> 154983 training images
+    -> 38748 validation images
+    -> 10697769 trainable parameters
+

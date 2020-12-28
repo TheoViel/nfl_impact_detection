@@ -1,0 +1,37 @@
+
+-------------   Fold 1 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b1
+    -> 154983 training images
+    -> 38748 validation images
+    -> 6514465 trainable parameters
+
+Using 157 out of 1210 batches by limiting to 10 samples per player.
+
+Epoch 01/20 	 lr=1.0e-03	 t=50s 	loss=0.537	val_loss=0.351 	 auc=0.748	 aucs_aux=0
+Epoch 02/20 	 lr=9.5e-04	 t=49s 	loss=0.545	val_loss=0.334 	 auc=0.819	 aucs_aux=0
+Epoch 03/20 	 lr=8.9e-04	 t=49s 	loss=0.539	val_loss=0.518 	 auc=0.723	 aucs_aux=0
+Epoch 04/20 	 lr=8.4e-04	 t=49s 	loss=0.520	val_loss=0.536 	 auc=0.452	 aucs_aux=0
+Epoch 05/20 	 lr=7.9e-04	 t=49s 	loss=0.503	val_loss=0.427 	 auc=0.708	 aucs_aux=0
+Epoch 06/20 	 lr=7.4e-04	 t=49s 	loss=0.499	val_loss=0.330 	 auc=0.759	 aucs_aux=0
+Epoch 07/20 	 lr=6.8e-04	 t=49s 	loss=0.497	val_loss=0.429 	 auc=0.439	 aucs_aux=0
+Epoch 08/20 	 lr=6.3e-04	 t=49s 	loss=0.489	val_loss=0.290 	 auc=0.794	 aucs_aux=0
+Epoch 09/20 	 lr=5.8e-04	 t=69s 	loss=0.495	val_loss=0.402 	 auc=0.764	 aucs_aux=0
+Epoch 10/20 	 lr=5.3e-04	 t=54s 	loss=0.473	val_loss=0.280 	 auc=0.817	 aucs_aux=0
+Epoch 11/20 	 lr=4.7e-04	 t=49s 	loss=0.462	val_loss=0.329 	 auc=0.587	 aucs_aux=0
+Epoch 12/20 	 lr=4.2e-04	 t=49s 	loss=0.462	val_loss=0.330 	 auc=0.651	 aucs_aux=0
+Epoch 13/20 	 lr=3.7e-04	 t=49s 	loss=0.472	val_loss=0.258 	 auc=0.828	 aucs_aux=0
+Epoch 14/20 	 lr=3.2e-04	 t=49s 	loss=0.462	val_loss=0.306 	 auc=0.775	 aucs_aux=0
+Epoch 15/20 	 lr=2.6e-04	 t=49s 	loss=0.466	val_loss=0.264 	 auc=0.791	 aucs_aux=0
+Epoch 16/20 	 lr=2.1e-04	 t=49s 	loss=0.456	val_loss=0.243 	 auc=0.855	 aucs_aux=0
+Epoch 17/20 	 lr=1.6e-04	 t=49s 	loss=0.444	val_loss=0.240 	 auc=0.868	 aucs_aux=0
+Epoch 18/20 	 lr=1.1e-04	 t=49s 	loss=0.449	val_loss=0.237 	 auc=0.878	 aucs_aux=0
+Epoch 19/20 	 lr=5.3e-05	 t=49s 	loss=0.458	val_loss=0.243 	 auc=0.882	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=49s 	loss=0.456	val_loss=0.248 	 auc=0.885	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls/2020-12-23/5/efficientnet-b1_0.pt
+
+
+ - Predicting on full data.
+
+  -> CV auc : 0.5109

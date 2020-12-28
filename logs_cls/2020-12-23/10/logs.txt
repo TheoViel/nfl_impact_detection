@@ -1,0 +1,19 @@
+
+-------------   Fold 1 / 5  -------------
+
+Loaded pretrained weights for efficientnet-b3
+    -> 154983 training images
+    -> 38748 validation images
+    -> 10697769 trainable parameters
+
+Epoch 01/04 	 lr=7.9e-04	 t=370s 	loss=0.514	val_loss=0.473 	 auc=0.884	 aucs_aux=0
+Epoch 02/04 	 lr=5.3e-04	 t=372s 	loss=0.424	val_loss=0.264 	 auc=0.873	 aucs_aux=0
+Epoch 03/04 	 lr=2.6e-04	 t=372s 	loss=0.365	val_loss=0.319 	 auc=0.879	 aucs_aux=0
+Epoch 04/04 	 lr=0.0e+00	 t=373s 	loss=0.312	val_loss=0.308 	 auc=0.875	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls/2020-12-23/10/efficientnet-b3_0.pt
+
+
+ - Predicting on full data.
+
+  -> CV auc : 0.5100

@@ -33,6 +33,27 @@ def plot_bboxes(img, boxes, label, transpose=False):
     plt.imshow(img)
 
 
+def plot_bboxes_indexed(img, boxes, transpose=False, start_idx=0):
+    thickness = 2 if img.shape[1] > 400 else 1
+    for i, box in enumerate(boxes):
+        if img.max() > 1:
+            color = (255, 0, 0)
+        else:
+            color = (1, 0, 0)
+
+        if not transpose:
+            cv2.rectangle(
+                img, (box[0], box[1]), (box[2], box[3]), color, thickness=thickness
+            )
+        else:
+            cv2.rectangle(
+                img, (box[1], box[0]), (box[3], box[2]), color, thickness=thickness
+            )
+        plt.text(box[0], box[1] - 5, f'#{i + start_idx}', c='r', size=9)
+
+    plt.imshow(img)
+
+
 def plot_bboxes_pred(img, boxes, labels, colors, transpose=False):
     thickness = 2 if img.shape[1] > 400 else 1
     for box, label, c in zip(boxes, labels, colors):
@@ -146,7 +167,10 @@ def visualize_preds(df_pred, video_name, frame, root="", truth_col="impact", thr
     boxes[:, 3] += boxes[:, 2]
     boxes = boxes[:, [0, 2, 1, 3]]
 
-    labels = [f"{l}\n{s:.3f}" for s, l in df[["pred", "predicted_impact_type"]].values]
+    try:
+        labels = [f"{l}\n{s:.3f}" for s, l in df[["pred", "predicted_impact_type"]].values]
+    except KeyError:
+        labels = [f"{s:.3f}" for s in df["pred"].values]
 
     colors = []
     if "match" in df.columns:
@@ -173,3 +197,22 @@ def visualize_preds(df_pred, video_name, frame, root="", truth_col="impact", thr
 
     plot_bboxes_pred(img, boxes, labels, colors)
     plt.title(f"Video {video_name} - frame {frame}")
+
+
+def visualize_preds_indexed(df_pred, idx, root='', start_idx=0):
+    video_name = df_pred['video'][idx]
+    frame = df_pred['frame'][idx]
+    img = f"{video_name[:-4]}_{frame:04d}.png"
+    img = cv2.imread(root + img)
+#     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+    df = df_pred[df_pred["video"] == video_name]
+    df = df[df['frame'] == frame]
+
+    boxes = df[['left', 'width', 'top', 'height']].values
+    boxes[:, 1] += boxes[:, 0]
+    boxes[:, 3] += boxes[:, 2]
+    boxes = boxes[:, [0, 2, 1, 3]]
+
+    plot_bboxes_indexed(img, boxes, start_idx=start_idx)
+    plt.title(f'Video {video_name} - frame {frame}')

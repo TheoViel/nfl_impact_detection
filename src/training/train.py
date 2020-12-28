@@ -7,14 +7,14 @@ from tqdm import tqdm  # noqa
 from torchcontrib.optim import SWA
 from torch.utils.data import DataLoader
 from sklearn.metrics import roc_auc_score
-from torch.utils.data.sampler import RandomSampler
+from torch.utils.data.sampler import RandomSampler  # noqa
 from transformers import get_linear_schedule_with_warmup
 
 from params import NUM_WORKERS
 from training.meter import NFLMeter
 from model_zoo.models_det import get_val_model
 from training.optim import define_optimizer
-from training.sampler import PlayerSampler
+from training.sampler import PlayerSampler, BalancedSampler
 
 
 def collate_fn(batch):
@@ -213,7 +213,8 @@ def fit_cls(
 
     if samples_per_player:
         sampler = PlayerSampler(
-            RandomSampler(train_dataset),
+            # RandomSampler(train_dataset),
+            BalancedSampler(train_dataset, alpha=1),
             train_dataset.players,
             batch_size=batch_size,
             drop_last=True,
@@ -233,8 +234,9 @@ def fit_cls(
     else:
         train_loader = DataLoader(
             train_dataset,
+            sampler=BalancedSampler(train_dataset, alpha=1),
             batch_size=batch_size,
-            shuffle=True,
+            # shuffle=True,
             drop_last=True,
             num_workers=NUM_WORKERS,
             pin_memory=True,
@@ -313,28 +315,32 @@ def fit_cls(
                     avg_val_loss += loss.item() / len(val_loader)
 
                     y_pred = torch.sigmoid(y_pred).view(-1)
-                    y_pred_aux = (
-                        y_pred_aux.sigmoid() if aux_mode == "sigmoid"
-                        else y_pred_aux.softmax(-1)
-                    )
-
                     preds = np.concatenate([preds, y_pred.detach().cpu().numpy()])
-                    preds_aux = np.concatenate(
-                        [preds_aux, y_pred_aux.detach().cpu().numpy()]
-                    )
+
+                    if num_classes_aux:
+                        y_pred_aux = (
+                            y_pred_aux.sigmoid() if aux_mode == "sigmoid"
+                            else y_pred_aux.softmax(-1)
+                        )
+                        preds_aux = np.concatenate(
+                            [preds_aux, y_pred_aux.detach().cpu().numpy()]
+                        )
 
         auc = roc_auc_score(val_dataset.labels, preds)
 
-        if aux_mode == "sigmoid":
-            scores_aux = np.round([
-                roc_auc_score(val_dataset.aux_labels[:, i], preds_aux[:, i])
-                for i in range(num_classes_aux)
-            ], 3,).tolist()
+        if num_classes_aux:
+            if aux_mode == "sigmoid":
+                scores_aux = np.round([
+                    roc_auc_score(val_dataset.aux_labels[:, i], preds_aux[:, i])
+                    for i in range(num_classes_aux)
+                ], 3,).tolist()
+            else:
+                scores_aux = np.round([
+                    roc_auc_score((val_dataset.aux_labels == i).astype(int), preds_aux[:, i])
+                    for i in range(num_classes_aux)
+                ], 3,).tolist()
         else:
-            scores_aux = np.round([
-                roc_auc_score((val_dataset.aux_labels == i).astype(int), preds_aux[:, i])
-                for i in range(num_classes_aux)
-            ], 3,).tolist()
+            scores_aux = 0
 
         elapsed_time = time.time() - start_time
         if (epoch + 1) % verbose == 0:

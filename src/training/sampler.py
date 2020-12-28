@@ -1,4 +1,6 @@
-from torch.utils.data.sampler import BatchSampler
+import torch
+import numpy as np
+from torch.utils.data.sampler import BatchSampler, Sampler
 
 
 class PlayerSampler(BatchSampler):
@@ -82,3 +84,42 @@ class PlayerSampler(BatchSampler):
         if len(batch) > 0 and not self.drop_last:
             yielded += 1
             yield batch
+
+
+class BalancedSampler(Sampler):
+    """
+    Adapted from https://github.com/ufoym/imbalanced-dataset-sampler
+    """
+
+    def __init__(self, dataset, alpha=1):
+        self.indices = list(range(len(dataset)))
+        self.num_samples = len(self.indices)
+
+        # distribution of classes in the dataset
+        label_to_count = {}
+        for idx in self.indices:
+            label = self._get_label(dataset, idx)
+            if label in label_to_count:
+                label_to_count[label] += 1
+            else:
+                label_to_count[label] = 1
+
+        # weight for each sample
+        weights = [
+            1.0 / label_to_count[self._get_label(dataset, idx)] for idx in self.indices
+        ]
+        weights = np.array(weights) ** alpha
+        weights /= np.sum(weights)
+        self.weights = torch.DoubleTensor(weights)
+
+    def _get_label(self, dataset, idx):
+        return dataset.labels[idx]
+
+    def __iter__(self):
+        return (
+            self.indices[i]
+            for i in torch.multinomial(self.weights, self.num_samples, replacement=True)
+        )
+
+    def __len__(self):
+        return self.num_samples
