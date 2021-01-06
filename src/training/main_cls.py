@@ -140,7 +140,6 @@ def k_fold_cls(config, df, log_folder=None):
             pred_oof[val_idx] = pred_val_full
             if config.num_classes_aux:
                 pred_oof_aux[val_idx] = pred_val_aux_full
-            
 
             if log_folder is not None:
                 np.save(log_folder + f"preds_{i}.npy", pred_val)

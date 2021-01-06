@@ -165,3 +165,37 @@ def get_transfos_cls(visualize=False, train=True):
 
     else:
         return normalizer
+
+
+def get_transfos_cls_3d(visualize=False, train=True):
+    if visualize:
+        normalizer = albu.Compose(
+            [
+                ToTensorV2(),
+            ],
+            p=1,
+        )
+    else:
+        normalizer = albu.Compose(
+            [
+                albu.Normalize(mean=MEAN, std=STD),
+                ToTensorV2(),
+            ],
+            p=1,
+        )
+
+    if train:
+        return albu.Compose(
+            [
+                albu.HorizontalFlip(p=0.5),
+                albu.ShiftScaleRotate(
+                    scale_limit=0.5, shift_limit=0.5, rotate_limit=90, p=0.75
+                ),
+                color_transforms(p=0.5),
+                channel_transforms(p=0.2),
+                normalizer,
+            ],
+        )
+
+    else:
+        return normalizer

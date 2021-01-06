@@ -1,0 +1,177 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowonly_r50_omni_4x16x1_kinetics400_rgb.pth"
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 32456145 trainable parameters
+
+Using 254 out of 4843 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=139s 	loss=0.353	
+Epoch 02/20 	 lr=4.7e-04	 t=141s 	loss=0.269	
+Epoch 03/20 	 lr=4.5e-04	 t=141s 	loss=0.240	
+Epoch 04/20 	 lr=4.2e-04	 t=142s 	loss=0.234	
+Epoch 05/20 	 lr=3.9e-04	 t=142s 	loss=0.221	
+Epoch 06/20 	 lr=3.7e-04	 t=142s 	loss=0.207	
+Epoch 07/20 	 lr=3.4e-04	 t=143s 	loss=0.193	
+Epoch 08/20 	 lr=3.2e-04	 t=142s 	loss=0.191	
+Epoch 09/20 	 lr=2.9e-04	 t=142s 	loss=0.183	
+Epoch 10/20 	 lr=2.6e-04	 t=142s 	loss=0.170	
+Epoch 11/20 	 lr=2.4e-04	 t=142s 	loss=0.166	
+Epoch 12/20 	 lr=2.1e-04	 t=142s 	loss=0.152	
+Epoch 13/20 	 lr=1.8e-04	 t=142s 	loss=0.141	
+Epoch 14/20 	 lr=1.6e-04	 t=142s 	loss=0.123	
+Epoch 15/20 	 lr=1.3e-04	 t=142s 	loss=0.118	
+Epoch 16/20 	 lr=1.1e-04	 t=142s 	loss=0.108	
+Epoch 17/20 	 lr=7.9e-05	 t=142s 	loss=0.101	
+Epoch 18/20 	 lr=5.3e-05	 t=306s 	loss=0.082	val_loss=0.212 	 auc=0.914	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=304s 	loss=0.080	val_loss=0.216 	 auc=0.914	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=304s 	loss=0.069	val_loss=0.216 	 auc=0.914	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/1/slowonly_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowonly_r50_omni_4x16x1_kinetics400_rgb.pth"
+
+    -> 155072 training images
+    -> 38659 validation images
+    -> 32456145 trainable parameters
+
+Using 253 out of 4846 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=142s 	loss=0.350	
+Epoch 02/20 	 lr=4.7e-04	 t=142s 	loss=0.267	
+Epoch 03/20 	 lr=4.5e-04	 t=142s 	loss=0.246	
+Epoch 04/20 	 lr=4.2e-04	 t=142s 	loss=0.228	
+Epoch 05/20 	 lr=3.9e-04	 t=142s 	loss=0.221	
+Epoch 06/20 	 lr=3.7e-04	 t=142s 	loss=0.203	
+Epoch 07/20 	 lr=3.4e-04	 t=142s 	loss=0.203	
+Epoch 08/20 	 lr=3.2e-04	 t=142s 	loss=0.183	
+Epoch 09/20 	 lr=2.9e-04	 t=142s 	loss=0.167	
+Epoch 10/20 	 lr=2.6e-04	 t=142s 	loss=0.172	
+Epoch 11/20 	 lr=2.4e-04	 t=142s 	loss=0.162	
+Epoch 12/20 	 lr=2.1e-04	 t=142s 	loss=0.159	
+Epoch 13/20 	 lr=1.8e-04	 t=142s 	loss=0.145	
+Epoch 14/20 	 lr=1.6e-04	 t=142s 	loss=0.132	
+Epoch 15/20 	 lr=1.3e-04	 t=142s 	loss=0.118	
+Epoch 16/20 	 lr=1.1e-04	 t=142s 	loss=0.108	
+Epoch 17/20 	 lr=7.9e-05	 t=141s 	loss=0.095	
+Epoch 18/20 	 lr=5.3e-05	 t=305s 	loss=0.087	val_loss=0.246 	 auc=0.896	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=303s 	loss=0.082	val_loss=0.250 	 auc=0.898	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=304s 	loss=0.070	val_loss=0.250 	 auc=0.895	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/1/slowonly_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowonly_r50_omni_4x16x1_kinetics400_rgb.pth"
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 32456145 trainable parameters
+
+Using 253 out of 4843 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=142s 	loss=0.354	
+Epoch 02/20 	 lr=4.7e-04	 t=142s 	loss=0.269	
+Epoch 03/20 	 lr=4.5e-04	 t=142s 	loss=0.255	
+Epoch 04/20 	 lr=4.2e-04	 t=142s 	loss=0.246	
+Epoch 05/20 	 lr=3.9e-04	 t=141s 	loss=0.209	
+Epoch 06/20 	 lr=3.7e-04	 t=142s 	loss=0.219	
+Epoch 07/20 	 lr=3.4e-04	 t=141s 	loss=0.206	
+Epoch 08/20 	 lr=3.2e-04	 t=142s 	loss=0.187	
+Epoch 09/20 	 lr=2.9e-04	 t=141s 	loss=0.181	
+Epoch 10/20 	 lr=2.6e-04	 t=142s 	loss=0.181	
+Epoch 11/20 	 lr=2.4e-04	 t=141s 	loss=0.162	
+Epoch 12/20 	 lr=2.1e-04	 t=141s 	loss=0.161	
+Epoch 13/20 	 lr=1.8e-04	 t=141s 	loss=0.137	
+Epoch 14/20 	 lr=1.6e-04	 t=142s 	loss=0.122	
+Epoch 15/20 	 lr=1.3e-04	 t=142s 	loss=0.124	
+Epoch 16/20 	 lr=1.1e-04	 t=141s 	loss=0.110	
+Epoch 17/20 	 lr=7.9e-05	 t=142s 	loss=0.097	
+Epoch 18/20 	 lr=5.3e-05	 t=304s 	loss=0.089	val_loss=0.238 	 auc=0.907	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=303s 	loss=0.080	val_loss=0.228 	 auc=0.908	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=303s 	loss=0.074	val_loss=0.229 	 auc=0.908	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/1/slowonly_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowonly_r50_omni_4x16x1_kinetics400_rgb.pth"
+
+    -> 154896 training images
+    -> 38835 validation images
+    -> 32456145 trainable parameters
+
+Using 254 out of 4840 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=142s 	loss=0.345	
+Epoch 02/20 	 lr=4.7e-04	 t=142s 	loss=0.266	
+Epoch 03/20 	 lr=4.5e-04	 t=142s 	loss=0.242	
+Epoch 04/20 	 lr=4.2e-04	 t=142s 	loss=0.226	
+Epoch 05/20 	 lr=3.9e-04	 t=142s 	loss=0.214	
+Epoch 06/20 	 lr=3.7e-04	 t=142s 	loss=0.205	
+Epoch 07/20 	 lr=3.4e-04	 t=142s 	loss=0.196	
+Epoch 08/20 	 lr=3.2e-04	 t=142s 	loss=0.181	
+Epoch 09/20 	 lr=2.9e-04	 t=142s 	loss=0.177	
+Epoch 10/20 	 lr=2.6e-04	 t=142s 	loss=0.158	
+Epoch 11/20 	 lr=2.4e-04	 t=142s 	loss=0.143	
+Epoch 12/20 	 lr=2.1e-04	 t=142s 	loss=0.139	
+Epoch 13/20 	 lr=1.8e-04	 t=142s 	loss=0.137	
+Epoch 14/20 	 lr=1.6e-04	 t=142s 	loss=0.116	
+Epoch 15/20 	 lr=1.3e-04	 t=142s 	loss=0.115	
+Epoch 16/20 	 lr=1.1e-04	 t=142s 	loss=0.100	
+Epoch 17/20 	 lr=7.9e-05	 t=142s 	loss=0.084	
+Epoch 18/20 	 lr=5.3e-05	 t=305s 	loss=0.082	val_loss=0.242 	 auc=0.903	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=304s 	loss=0.067	val_loss=0.248 	 auc=0.905	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=304s 	loss=0.066	val_loss=0.234 	 auc=0.907	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/1/slowonly_3.pt
+
+
+-------------   Fold 5 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowonly_r50_omni_4x16x1_kinetics400_rgb.pth"
+
+    -> 154990 training images
+    -> 38741 validation images
+    -> 32456145 trainable parameters
+
+Using 256 out of 4843 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=143s 	loss=0.348	
+Epoch 02/20 	 lr=4.7e-04	 t=143s 	loss=0.271	
+Epoch 03/20 	 lr=4.5e-04	 t=143s 	loss=0.250	
+Epoch 04/20 	 lr=4.2e-04	 t=143s 	loss=0.239	
+Epoch 05/20 	 lr=3.9e-04	 t=143s 	loss=0.221	
+Epoch 06/20 	 lr=3.7e-04	 t=144s 	loss=0.212	
+Epoch 07/20 	 lr=3.4e-04	 t=143s 	loss=0.198	
+Epoch 08/20 	 lr=3.2e-04	 t=143s 	loss=0.189	
+Epoch 09/20 	 lr=2.9e-04	 t=143s 	loss=0.180	
+Epoch 10/20 	 lr=2.6e-04	 t=143s 	loss=0.163	
+Epoch 11/20 	 lr=2.4e-04	 t=143s 	loss=0.147	
+Epoch 12/20 	 lr=2.1e-04	 t=143s 	loss=0.145	
+Epoch 13/20 	 lr=1.8e-04	 t=143s 	loss=0.132	
+Epoch 14/20 	 lr=1.6e-04	 t=143s 	loss=0.129	
+Epoch 15/20 	 lr=1.3e-04	 t=143s 	loss=0.111	
+Epoch 16/20 	 lr=1.1e-04	 t=143s 	loss=0.098	
+Epoch 17/20 	 lr=7.9e-05	 t=143s 	loss=0.091	
+Epoch 18/20 	 lr=5.3e-05	 t=306s 	loss=0.084	val_loss=0.224 	 auc=0.916	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=305s 	loss=0.076	val_loss=0.228 	 auc=0.916	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=305s 	loss=0.068	val_loss=0.225 	 auc=0.917	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/1/slowonly_4.pt
+
+
+  -> CV auc : 0.5000

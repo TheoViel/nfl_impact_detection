@@ -1,0 +1,12 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowonly_r50_omni_4x16x1_kinetics400_rgb.pth"
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 32456145 trainable parameters
+
+Using 127 out of 2421 batches by limiting to 4 samples per player.
+

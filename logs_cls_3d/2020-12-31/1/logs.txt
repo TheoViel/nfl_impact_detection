@@ -1,0 +1,180 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d34_KM_200ep.pth
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 63514049 trainable parameters
+
+Using 127 out of 2421 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=176s 	loss=0.325	
+Epoch 02/20 	 lr=4.7e-04	 t=180s 	loss=0.270	
+Epoch 03/20 	 lr=4.5e-04	 t=181s 	loss=0.246	
+Epoch 04/20 	 lr=4.2e-04	 t=181s 	loss=0.237	
+Epoch 05/20 	 lr=3.9e-04	 t=181s 	loss=0.218	
+Epoch 06/20 	 lr=3.7e-04	 t=181s 	loss=0.214	
+Epoch 07/20 	 lr=3.4e-04	 t=182s 	loss=0.208	
+Epoch 08/20 	 lr=3.2e-04	 t=181s 	loss=0.196	
+Epoch 09/20 	 lr=2.9e-04	 t=182s 	loss=0.193	
+Epoch 10/20 	 lr=2.6e-04	 t=181s 	loss=0.181	
+Epoch 11/20 	 lr=2.4e-04	 t=182s 	loss=0.165	
+Epoch 12/20 	 lr=2.1e-04	 t=182s 	loss=0.159	
+Epoch 13/20 	 lr=1.8e-04	 t=181s 	loss=0.155	
+Epoch 14/20 	 lr=1.6e-04	 t=182s 	loss=0.145	
+Epoch 15/20 	 lr=1.3e-04	 t=428s 	loss=0.130	val_loss=0.223 	 auc=0.896	 aucs_aux=0
+Epoch 16/20 	 lr=1.1e-04	 t=425s 	loss=0.123	val_loss=0.214 	 auc=0.901	 aucs_aux=0
+Epoch 17/20 	 lr=7.9e-05	 t=426s 	loss=0.110	val_loss=0.218 	 auc=0.903	 aucs_aux=0
+Epoch 18/20 	 lr=5.3e-05	 t=426s 	loss=0.109	val_loss=0.218 	 auc=0.904	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=426s 	loss=0.082	val_loss=0.222 	 auc=0.903	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=426s 	loss=0.086	val_loss=0.224 	 auc=0.904	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2020-12-30/1/resnet34_0.pt
+
+
+  -> CV auc : 0.5000
+
+
+-------------   Fold 2 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d34_KM_200ep.pth
+
+    -> 155072 training images
+    -> 38659 validation images
+    -> 63514049 trainable parameters
+
+Using 126 out of 2423 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=179s 	loss=0.326	
+Epoch 02/20 	 lr=4.7e-04	 t=180s 	loss=0.252	
+Epoch 03/20 	 lr=4.5e-04	 t=180s 	loss=0.247	
+Epoch 04/20 	 lr=4.2e-04	 t=180s 	loss=0.240	
+Epoch 05/20 	 lr=3.9e-04	 t=180s 	loss=0.219	
+Epoch 06/20 	 lr=3.7e-04	 t=181s 	loss=0.213	
+Epoch 07/20 	 lr=3.4e-04	 t=181s 	loss=0.200	
+Epoch 08/20 	 lr=3.2e-04	 t=181s 	loss=0.185	
+Epoch 09/20 	 lr=2.9e-04	 t=180s 	loss=0.181	
+Epoch 10/20 	 lr=2.6e-04	 t=180s 	loss=0.177	
+Epoch 11/20 	 lr=2.4e-04	 t=180s 	loss=0.164	
+Epoch 12/20 	 lr=2.1e-04	 t=181s 	loss=0.161	
+Epoch 13/20 	 lr=1.8e-04	 t=181s 	loss=0.152	
+Epoch 14/20 	 lr=1.6e-04	 t=181s 	loss=0.135	
+Epoch 15/20 	 lr=1.3e-04	 t=181s 	loss=0.127	
+Epoch 16/20 	 lr=1.1e-04	 t=181s 	loss=0.113	
+Epoch 17/20 	 lr=7.9e-05	 t=181s 	loss=0.120	
+Epoch 18/20 	 lr=5.3e-05	 t=181s 	loss=0.097	
+Epoch 19/20 	 lr=2.6e-05	 t=426s 	loss=0.085	val_loss=0.247 	 auc=0.891	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=425s 	loss=0.086	val_loss=0.244 	 auc=0.894	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2020-12-31/1/resnet34_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d34_KM_200ep.pth
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 63514049 trainable parameters
+
+Using 126 out of 2421 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=181s 	loss=0.335	
+Epoch 02/20 	 lr=4.7e-04	 t=181s 	loss=0.273	
+Epoch 03/20 	 lr=4.5e-04	 t=181s 	loss=0.252	
+Epoch 04/20 	 lr=4.2e-04	 t=181s 	loss=0.237	
+Epoch 05/20 	 lr=3.9e-04	 t=181s 	loss=0.214	
+Epoch 06/20 	 lr=3.7e-04	 t=180s 	loss=0.211	
+Epoch 07/20 	 lr=3.4e-04	 t=180s 	loss=0.201	
+Epoch 08/20 	 lr=3.2e-04	 t=180s 	loss=0.195	
+Epoch 09/20 	 lr=2.9e-04	 t=180s 	loss=0.189	
+Epoch 10/20 	 lr=2.6e-04	 t=180s 	loss=0.181	
+Epoch 11/20 	 lr=2.4e-04	 t=180s 	loss=0.170	
+Epoch 12/20 	 lr=2.1e-04	 t=180s 	loss=0.158	
+Epoch 13/20 	 lr=1.8e-04	 t=180s 	loss=0.144	
+Epoch 14/20 	 lr=1.6e-04	 t=180s 	loss=0.142	
+Epoch 15/20 	 lr=1.3e-04	 t=180s 	loss=0.137	
+Epoch 16/20 	 lr=1.1e-04	 t=180s 	loss=0.124	
+Epoch 17/20 	 lr=7.9e-05	 t=180s 	loss=0.113	
+Epoch 18/20 	 lr=5.3e-05	 t=180s 	loss=0.101	
+Epoch 19/20 	 lr=2.6e-05	 t=426s 	loss=0.092	val_loss=0.244 	 auc=0.903	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=425s 	loss=0.083	val_loss=0.229 	 auc=0.901	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2020-12-31/1/resnet34_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d34_KM_200ep.pth
+
+    -> 154896 training images
+    -> 38835 validation images
+    -> 63514049 trainable parameters
+
+Using 127 out of 2420 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=182s 	loss=0.321	
+Epoch 02/20 	 lr=4.7e-04	 t=182s 	loss=0.270	
+Epoch 03/20 	 lr=4.5e-04	 t=182s 	loss=0.253	
+Epoch 04/20 	 lr=4.2e-04	 t=182s 	loss=0.231	
+Epoch 05/20 	 lr=3.9e-04	 t=182s 	loss=0.211	
+Epoch 06/20 	 lr=3.7e-04	 t=182s 	loss=0.215	
+Epoch 07/20 	 lr=3.4e-04	 t=182s 	loss=0.192	
+Epoch 08/20 	 lr=3.2e-04	 t=182s 	loss=0.195	
+Epoch 09/20 	 lr=2.9e-04	 t=182s 	loss=0.185	
+Epoch 10/20 	 lr=2.6e-04	 t=182s 	loss=0.174	
+Epoch 11/20 	 lr=2.4e-04	 t=182s 	loss=0.162	
+Epoch 12/20 	 lr=2.1e-04	 t=182s 	loss=0.159	
+Epoch 13/20 	 lr=1.8e-04	 t=182s 	loss=0.151	
+Epoch 14/20 	 lr=1.6e-04	 t=182s 	loss=0.131	
+Epoch 15/20 	 lr=1.3e-04	 t=182s 	loss=0.123	
+Epoch 16/20 	 lr=1.1e-04	 t=182s 	loss=0.122	
+Epoch 17/20 	 lr=7.9e-05	 t=182s 	loss=0.106	
+Epoch 18/20 	 lr=5.3e-05	 t=182s 	loss=0.103	
+Epoch 19/20 	 lr=2.6e-05	 t=427s 	loss=0.086	val_loss=0.264 	 auc=0.896	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=427s 	loss=0.081	val_loss=0.275 	 auc=0.896	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2020-12-31/1/resnet34_3.pt
+
+
+-------------   Fold 5 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d34_KM_200ep.pth
+
+    -> 154990 training images
+    -> 38741 validation images
+    -> 63514049 trainable parameters
+
+Using 128 out of 2421 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=183s 	loss=0.335	
+Epoch 02/20 	 lr=4.7e-04	 t=183s 	loss=0.284	
+Epoch 03/20 	 lr=4.5e-04	 t=183s 	loss=0.258	
+Epoch 04/20 	 lr=4.2e-04	 t=183s 	loss=0.238	
+Epoch 05/20 	 lr=3.9e-04	 t=183s 	loss=0.231	
+Epoch 06/20 	 lr=3.7e-04	 t=183s 	loss=0.209	
+Epoch 07/20 	 lr=3.4e-04	 t=183s 	loss=0.207	
+Epoch 08/20 	 lr=3.2e-04	 t=183s 	loss=0.193	
+Epoch 09/20 	 lr=2.9e-04	 t=183s 	loss=0.182	
+Epoch 10/20 	 lr=2.6e-04	 t=183s 	loss=0.176	
+Epoch 11/20 	 lr=2.4e-04	 t=183s 	loss=0.163	
+Epoch 12/20 	 lr=2.1e-04	 t=183s 	loss=0.157	
+Epoch 13/20 	 lr=1.8e-04	 t=183s 	loss=0.146	
+Epoch 14/20 	 lr=1.6e-04	 t=183s 	loss=0.138	
+Epoch 15/20 	 lr=1.3e-04	 t=183s 	loss=0.123	
+Epoch 16/20 	 lr=1.1e-04	 t=184s 	loss=0.117	
+Epoch 17/20 	 lr=7.9e-05	 t=183s 	loss=0.103	
+Epoch 18/20 	 lr=5.3e-05	 t=183s 	loss=0.095	
+Epoch 19/20 	 lr=2.6e-05	 t=428s 	loss=0.083	val_loss=0.223 	 auc=0.907	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=428s 	loss=0.077	val_loss=0.221 	 auc=0.907	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2020-12-31/1/resnet34_4.pt
+
+
+  -> CV auc : 0.5000

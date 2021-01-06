@@ -1,0 +1,12 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/rgb_imagenet.pt
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 12288289 trainable parameters
+
+Using 508 out of 9686 batches by limiting to 4 samples per player.
+

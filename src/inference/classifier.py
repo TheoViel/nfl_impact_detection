@@ -56,10 +56,10 @@ class NFLDatasetClsInference(Dataset):
         self.transforms = transforms
         self.root = root
 
-        self.images = np.unique(df["image_name"].values)
+        self.images = df["image_name"].unique()
         self.images = [cv2.imread(self.root + img) for img in self.images]
 
-        self.frame_to_img = list(np.unique(df["frame"].values))
+        self.frame_to_img = list(df["frame"].unique())
         self.frames = df["frame"].values
 
         self.boxes = df[["left", "width", "top", "height"]].values

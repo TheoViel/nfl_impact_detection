@@ -1,0 +1,39 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowfast_r50_256p_4x16x1_256e_kinetics400_rgb.pth"
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 34481593 trainable parameters
+
+Using 127 out of 2421 batches by limiting to 4 samples per player.
+
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/torch/nn/functional.py:3103: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor changed "
+Epoch 01/20 	 lr=5.0e-04	 t=39s 	loss=0.328	
+Epoch 02/20 	 lr=4.7e-04	 t=38s 	loss=0.234	
+Epoch 03/20 	 lr=4.5e-04	 t=39s 	loss=0.216	
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/queues.py", line 245, in _feed
+    send_bytes(obj)
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/queues.py", line 245, in _feed
+    send_bytes(obj)
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+BrokenPipeError: [Errno 32] Broken pipe
+  File "/nix/store/i9lzacdfrwlj1ayw551c016s0fq71p7j-python3-3.8.6/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload

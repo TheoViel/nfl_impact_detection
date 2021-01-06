@@ -1,0 +1,12 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d18_KM_200ep.pth
+
+    -> 137299 training images
+    -> 31019 validation images
+    -> 33204417 trainable parameters
+
+Using 56 out of 1072 batches by limiting to 4 samples per player.
+

@@ -14,7 +14,7 @@ from params import NUM_WORKERS
 from training.meter import NFLMeter
 from model_zoo.models_det import get_val_model
 from training.optim import define_optimizer
-from training.sampler import PlayerSampler, BalancedSampler
+from training.sampler import PlayerSampler, BalancedSampler  # noqa
 
 
 def collate_fn(batch):
@@ -213,8 +213,8 @@ def fit_cls(
 
     if samples_per_player:
         sampler = PlayerSampler(
-            # RandomSampler(train_dataset),
-            BalancedSampler(train_dataset, alpha=1),
+            RandomSampler(train_dataset),
+            # BalancedSampler(train_dataset, alpha=1),
             train_dataset.players,
             batch_size=batch_size,
             drop_last=True,
@@ -234,9 +234,9 @@ def fit_cls(
     else:
         train_loader = DataLoader(
             train_dataset,
-            sampler=BalancedSampler(train_dataset, alpha=1),
+            # sampler=BalancedSampler(train_dataset, alpha=1),
             batch_size=batch_size,
-            # shuffle=True,
+            shuffle=True,
             drop_last=True,
             num_workers=NUM_WORKERS,
             pin_memory=True,
@@ -295,7 +295,7 @@ def fit_cls(
         preds = np.empty(0)
         preds_aux = np.empty((0, num_classes_aux))
         model.eval()
-        avg_val_loss = 0.0
+        avg_val_loss, auc, scores_aux = 0., 0., 0.
         if epoch + 1 >= first_epoch_eval or epoch + 1 == epochs:
             with torch.no_grad():
                 for batch in val_loader:
@@ -326,21 +326,21 @@ def fit_cls(
                             [preds_aux, y_pred_aux.detach().cpu().numpy()]
                         )
 
-        auc = roc_auc_score(val_dataset.labels, preds)
+            auc = roc_auc_score(val_dataset.labels, preds)
 
-        if num_classes_aux:
-            if aux_mode == "sigmoid":
-                scores_aux = np.round([
-                    roc_auc_score(val_dataset.aux_labels[:, i], preds_aux[:, i])
-                    for i in range(num_classes_aux)
-                ], 3,).tolist()
+            if num_classes_aux:
+                if aux_mode == "sigmoid":
+                    scores_aux = np.round([
+                        roc_auc_score(val_dataset.aux_labels[:, i], preds_aux[:, i])
+                        for i in range(num_classes_aux)
+                    ], 3,).tolist()
+                else:
+                    scores_aux = np.round([
+                        roc_auc_score((val_dataset.aux_labels == i).astype(int), preds_aux[:, i])
+                        for i in range(num_classes_aux)
+                    ], 3,).tolist()
             else:
-                scores_aux = np.round([
-                    roc_auc_score((val_dataset.aux_labels == i).astype(int), preds_aux[:, i])
-                    for i in range(num_classes_aux)
-                ], 3,).tolist()
-        else:
-            scores_aux = 0
+                scores_aux = 0
 
         elapsed_time = time.time() - start_time
         if (epoch + 1) % verbose == 0:

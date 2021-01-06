@@ -1,0 +1,33 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d18_KM_200ep.pth
+
+    -> 137299 training images
+    -> 31019 validation images
+    -> 33204417 trainable parameters
+
+Using 113 out of 2145 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=178s 	loss=0.325	
+Epoch 02/20 	 lr=4.7e-04	 t=180s 	loss=0.284	
+Epoch 03/20 	 lr=4.5e-04	 t=181s 	loss=0.267	
+Epoch 04/20 	 lr=4.2e-04	 t=182s 	loss=0.248	
+The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+/home/theo/kaggle/nfl_impact/src
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3146: DtypeWarning: Columns (16) have mixed types.Specify dtype option on import or set low_memory=False.
+  has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3146: DtypeWarning: Columns (16) have mixed types.Specify dtype option on import or set low_memory=False.
+  has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3146: DtypeWarning: Columns (16) have mixed types.Specify dtype option on import or set low_memory=False.
+  has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+/home/theo/kaggle/nfl_impact/src
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3146: DtypeWarning: Columns (16) have mixed types.Specify dtype option on import or set low_memory=False.
+  has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+/home/theo/kaggle/nfl_impact/src

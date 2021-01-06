@@ -1,0 +1,24 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d34_KM_200ep.pth
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 63514049 trainable parameters
+
+Using 63 out of 2421 batches by limiting to 2 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=88s 	loss=0.355	
+Epoch 02/20 	 lr=4.7e-04	 t=89s 	loss=0.287	
+Epoch 03/20 	 lr=4.5e-04	 t=90s 	loss=0.262	
+Epoch 04/20 	 lr=4.2e-04	 t=90s 	loss=0.259	
+Epoch 05/20 	 lr=3.9e-04	 t=90s 	loss=0.245	
+Epoch 06/20 	 lr=3.7e-04	 t=91s 	loss=0.239	
+Epoch 07/20 	 lr=3.4e-04	 t=91s 	loss=0.240	
+Epoch 08/20 	 lr=3.2e-04	 t=92s 	loss=0.223	
+Epoch 09/20 	 lr=2.9e-04	 t=91s 	loss=0.230	
+Epoch 10/20 	 lr=2.6e-04	 t=338s 	loss=0.219	val_loss=0.241 	 auc=0.863	 aucs_aux=0
+Epoch 11/20 	 lr=2.4e-04	 t=336s 	loss=0.205	val_loss=0.224 	 auc=0.885	 aucs_aux=0
+Epoch 12/20 	 lr=2.1e-04	 t=336s 	loss=0.201	val_loss=0.221 	 auc=0.881	 aucs_aux=0

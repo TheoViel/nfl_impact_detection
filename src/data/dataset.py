@@ -88,3 +88,33 @@ class NFLDatasetCls(Dataset):
             image = self.transforms(image=image)["image"]
 
         return image, self.labels[idx], self.aux_labels[idx]
+
+
+class NFLDatasetCls3D(Dataset):
+    def __init__(self, df, transforms=None, target_name="impact", root="", visualize=False):
+        super().__init__()
+        self.transforms = transforms
+        self.visualize = visualize
+        self.root = root
+        self.images = df["crop_name"].values
+        self.labels = df[target_name].values
+        self.aux_labels = np.array(list(df['aux_target'].values))
+
+        self.players = (df['video'] + "_" + df['label']).values
+
+    def __len__(self):
+        return len(self.images)
+
+    def __getitem__(self, idx):
+        image = np.load(f"{self.root}/{self.images[idx]}")
+
+        if self.transforms:
+            image = self.transforms(image=image)["image"]
+
+        if not self.visualize:
+            image = (image / 255 - 0.5) / 0.5
+            image = image.transpose(3, 0, 1, 2)
+
+            image = torch.from_numpy(image).float()
+
+        return image, self.labels[idx], self.aux_labels[idx]

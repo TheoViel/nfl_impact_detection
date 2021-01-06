@@ -1,0 +1,43 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowfast_r50_256p_4x16x1_256e_kinetics400_rgb.pth"
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 34481593 trainable parameters
+
+Using 127 out of 2421 batches by limiting to 4 samples per player.
+
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/torch/nn/functional.py:3103: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor changed "
+Epoch 01/20 	 lr=5.0e-04	 t=40s 	loss=0.328	
+Epoch 02/20 	 lr=4.7e-04	 t=39s 	loss=0.228	
+Epoch 03/20 	 lr=4.5e-04	 t=39s 	loss=0.215	
+Epoch 04/20 	 lr=4.2e-04	 t=39s 	loss=0.210	
+Epoch 05/20 	 lr=3.9e-04	 t=39s 	loss=0.193	
+Epoch 06/20 	 lr=3.7e-04	 t=39s 	loss=0.179	
+Epoch 07/20 	 lr=3.4e-04	 t=39s 	loss=0.154	
+Epoch 08/20 	 lr=3.2e-04	 t=39s 	loss=0.177	
+Epoch 09/20 	 lr=2.9e-04	 t=39s 	loss=0.143	
+Epoch 10/20 	 lr=2.6e-04	 t=39s 	loss=0.144	
+Epoch 11/20 	 lr=2.4e-04	 t=39s 	loss=0.144	
+Epoch 12/20 	 lr=2.1e-04	 t=39s 	loss=0.128	
+Epoch 13/20 	 lr=1.8e-04	 t=39s 	loss=0.122	
+Epoch 14/20 	 lr=1.6e-04	 t=39s 	loss=0.109	
+Epoch 15/20 	 lr=1.3e-04	 t=39s 	loss=0.095	
+Epoch 16/20 	 lr=1.1e-04	 t=39s 	loss=0.094	
+Epoch 17/20 	 lr=7.9e-05	 t=39s 	loss=0.082	
+Epoch 18/20 	 lr=5.3e-05	 t=79s 	loss=0.072	val_loss=0.218 	 auc=0.918	 aucs_aux=0
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/torch/nn/functional.py:3103: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor changed "
+Epoch 19/20 	 lr=2.6e-05	 t=76s 	loss=0.064	val_loss=0.224 	 auc=0.919	 aucs_aux=0
+/nix/store/cj2idkghg775f3df1h2pqza6bfxrbnxi-python3-3.8.6-env/lib/python3.8/site-packages/torch/nn/functional.py:3103: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor changed "
+Epoch 20/20 	 lr=0.0e+00	 t=76s 	loss=0.057	val_loss=0.230 	 auc=0.919	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-02/7/slowfast_0.pt
+
+
+  -> CV auc : 0.5000

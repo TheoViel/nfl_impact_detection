@@ -1,0 +1,37 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d18_KM_200ep.pth
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 33206469 trainable parameters
+
+Using 63 out of 1210 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=104s 	loss=0.883	
+Epoch 02/20 	 lr=4.7e-04	 t=105s 	loss=0.599	
+Epoch 03/20 	 lr=4.5e-04	 t=106s 	loss=0.549	
+Epoch 04/20 	 lr=4.2e-04	 t=106s 	loss=0.492	
+Epoch 05/20 	 lr=3.9e-04	 t=106s 	loss=0.500	
+Epoch 06/20 	 lr=3.7e-04	 t=106s 	loss=0.464	
+Epoch 07/20 	 lr=3.4e-04	 t=106s 	loss=0.446	
+Epoch 08/20 	 lr=3.2e-04	 t=107s 	loss=0.439	
+Epoch 09/20 	 lr=2.9e-04	 t=107s 	loss=0.397	
+Epoch 10/20 	 lr=2.6e-04	 t=107s 	loss=0.378	
+Epoch 11/20 	 lr=2.4e-04	 t=109s 	loss=0.360	
+Epoch 12/20 	 lr=2.1e-04	 t=107s 	loss=0.347	
+Epoch 13/20 	 lr=1.8e-04	 t=107s 	loss=0.323	
+Epoch 14/20 	 lr=1.6e-04	 t=107s 	loss=0.292	
+Epoch 15/20 	 lr=1.3e-04	 t=245s 	loss=0.278	val_loss=0.543 	 auc=0.897	 aucs_aux=[0.897, 0.897, 0.858, 0.934]
+Epoch 16/20 	 lr=1.1e-04	 t=241s 	loss=0.249	val_loss=0.523 	 auc=0.904	 aucs_aux=[0.904, 0.907, 0.855, 0.94]
+Epoch 17/20 	 lr=7.9e-05	 t=241s 	loss=0.236	val_loss=0.556 	 auc=0.909	 aucs_aux=[0.91, 0.91, 0.852, 0.942]
+Epoch 18/20 	 lr=5.3e-05	 t=241s 	loss=0.214	val_loss=0.515 	 auc=0.910	 aucs_aux=[0.909, 0.911, 0.861, 0.932]
+Epoch 19/20 	 lr=2.6e-05	 t=242s 	loss=0.178	val_loss=0.546 	 auc=0.909	 aucs_aux=[0.909, 0.908, 0.855, 0.924]
+Epoch 20/20 	 lr=0.0e+00	 t=241s 	loss=0.191	val_loss=0.528 	 auc=0.909	 aucs_aux=[0.909, 0.909, 0.861, 0.928]
+
+ -> Saving weights to ../logs_cls_3d/2020-12-30/3/resnet18_0.pt
+
+
+  -> CV auc : 0.5000

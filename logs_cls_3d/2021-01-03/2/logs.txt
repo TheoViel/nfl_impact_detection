@@ -1,0 +1,176 @@
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowfast_r50_256p_4x16x1_256e_kinetics400_rgb.pth"
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 34481593 trainable parameters
+
+Using 127 out of 2421 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=40s 	loss=0.328	
+Epoch 02/20 	 lr=4.7e-04	 t=39s 	loss=0.228	
+Epoch 03/20 	 lr=4.5e-04	 t=39s 	loss=0.215	
+Epoch 04/20 	 lr=4.2e-04	 t=39s 	loss=0.210	
+Epoch 05/20 	 lr=3.9e-04	 t=39s 	loss=0.193	
+Epoch 06/20 	 lr=3.7e-04	 t=39s 	loss=0.179	
+Epoch 07/20 	 lr=3.4e-04	 t=39s 	loss=0.154	
+Epoch 08/20 	 lr=3.2e-04	 t=39s 	loss=0.177	
+Epoch 09/20 	 lr=2.9e-04	 t=39s 	loss=0.143	
+Epoch 10/20 	 lr=2.6e-04	 t=39s 	loss=0.144	
+Epoch 11/20 	 lr=2.4e-04	 t=39s 	loss=0.144	
+Epoch 12/20 	 lr=2.1e-04	 t=39s 	loss=0.128	
+Epoch 13/20 	 lr=1.8e-04	 t=39s 	loss=0.122	
+Epoch 14/20 	 lr=1.6e-04	 t=39s 	loss=0.109	
+Epoch 15/20 	 lr=1.3e-04	 t=39s 	loss=0.095	
+Epoch 16/20 	 lr=1.1e-04	 t=39s 	loss=0.094	
+Epoch 17/20 	 lr=7.9e-05	 t=39s 	loss=0.082	
+Epoch 18/20 	 lr=5.3e-05	 t=79s 	loss=0.072	val_loss=0.218 	 auc=0.918	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=76s 	loss=0.064	val_loss=0.224 	 auc=0.919	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=76s 	loss=0.057	val_loss=0.230 	 auc=0.919	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-02/7/slowfast_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowfast_r50_256p_4x16x1_256e_kinetics400_rgb.pth"
+
+    -> 155072 training images
+    -> 38659 validation images
+    -> 34481593 trainable parameters
+
+Using 126 out of 2423 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=39s 	loss=0.321	
+Epoch 02/20 	 lr=4.7e-04	 t=38s 	loss=0.224	
+Epoch 03/20 	 lr=4.5e-04	 t=38s 	loss=0.196	
+Epoch 04/20 	 lr=4.2e-04	 t=38s 	loss=0.206	
+Epoch 05/20 	 lr=3.9e-04	 t=39s 	loss=0.179	
+Epoch 06/20 	 lr=3.7e-04	 t=39s 	loss=0.171	
+Epoch 07/20 	 lr=3.4e-04	 t=39s 	loss=0.167	
+Epoch 08/20 	 lr=3.2e-04	 t=39s 	loss=0.149	
+Epoch 09/20 	 lr=2.9e-04	 t=39s 	loss=0.138	
+Epoch 10/20 	 lr=2.6e-04	 t=39s 	loss=0.140	
+Epoch 11/20 	 lr=2.4e-04	 t=39s 	loss=0.136	
+Epoch 12/20 	 lr=2.1e-04	 t=39s 	loss=0.121	
+Epoch 13/20 	 lr=1.8e-04	 t=39s 	loss=0.121	
+Epoch 14/20 	 lr=1.6e-04	 t=39s 	loss=0.100	
+Epoch 15/20 	 lr=1.3e-04	 t=39s 	loss=0.090	
+Epoch 16/20 	 lr=1.1e-04	 t=39s 	loss=0.082	
+Epoch 17/20 	 lr=7.9e-05	 t=39s 	loss=0.079	
+Epoch 18/20 	 lr=5.3e-05	 t=92s 	loss=0.072	val_loss=0.242 	 auc=0.900	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=76s 	loss=0.058	val_loss=0.244 	 auc=0.899	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=75s 	loss=0.055	val_loss=0.246 	 auc=0.898	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/2/slowfast_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowfast_r50_256p_4x16x1_256e_kinetics400_rgb.pth"
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 34481593 trainable parameters
+
+Using 126 out of 2421 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=39s 	loss=0.327	
+Epoch 02/20 	 lr=4.7e-04	 t=39s 	loss=0.239	
+Epoch 03/20 	 lr=4.5e-04	 t=39s 	loss=0.216	
+Epoch 04/20 	 lr=4.2e-04	 t=39s 	loss=0.201	
+Epoch 05/20 	 lr=3.9e-04	 t=39s 	loss=0.183	
+Epoch 06/20 	 lr=3.7e-04	 t=39s 	loss=0.177	
+Epoch 07/20 	 lr=3.4e-04	 t=40s 	loss=0.166	
+Epoch 08/20 	 lr=3.2e-04	 t=39s 	loss=0.164	
+Epoch 09/20 	 lr=2.9e-04	 t=39s 	loss=0.147	
+Epoch 10/20 	 lr=2.6e-04	 t=39s 	loss=0.144	
+Epoch 11/20 	 lr=2.4e-04	 t=39s 	loss=0.139	
+Epoch 12/20 	 lr=2.1e-04	 t=39s 	loss=0.124	
+Epoch 13/20 	 lr=1.8e-04	 t=39s 	loss=0.117	
+Epoch 14/20 	 lr=1.6e-04	 t=39s 	loss=0.106	
+Epoch 15/20 	 lr=1.3e-04	 t=39s 	loss=0.103	
+Epoch 16/20 	 lr=1.1e-04	 t=40s 	loss=0.093	
+Epoch 17/20 	 lr=7.9e-05	 t=39s 	loss=0.074	
+Epoch 18/20 	 lr=5.3e-05	 t=100s 	loss=0.071	val_loss=0.228 	 auc=0.901	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=76s 	loss=0.058	val_loss=0.235 	 auc=0.900	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=76s 	loss=0.065	val_loss=0.233 	 auc=0.899	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/2/slowfast_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowfast_r50_256p_4x16x1_256e_kinetics400_rgb.pth"
+
+    -> 154896 training images
+    -> 38835 validation images
+    -> 34481593 trainable parameters
+
+Using 127 out of 2420 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=39s 	loss=0.327	
+Epoch 02/20 	 lr=4.7e-04	 t=41s 	loss=0.239	
+Epoch 03/20 	 lr=4.5e-04	 t=39s 	loss=0.209	
+Epoch 04/20 	 lr=4.2e-04	 t=39s 	loss=0.195	
+Epoch 05/20 	 lr=3.9e-04	 t=40s 	loss=0.179	
+Epoch 06/20 	 lr=3.7e-04	 t=39s 	loss=0.168	
+Epoch 07/20 	 lr=3.4e-04	 t=39s 	loss=0.151	
+Epoch 08/20 	 lr=3.2e-04	 t=39s 	loss=0.157	
+Epoch 09/20 	 lr=2.9e-04	 t=39s 	loss=0.151	
+Epoch 10/20 	 lr=2.6e-04	 t=39s 	loss=0.139	
+Epoch 11/20 	 lr=2.4e-04	 t=39s 	loss=0.135	
+Epoch 12/20 	 lr=2.1e-04	 t=39s 	loss=0.120	
+Epoch 13/20 	 lr=1.8e-04	 t=41s 	loss=0.118	
+Epoch 14/20 	 lr=1.6e-04	 t=39s 	loss=0.111	
+Epoch 15/20 	 lr=1.3e-04	 t=39s 	loss=0.090	
+Epoch 16/20 	 lr=1.1e-04	 t=39s 	loss=0.089	
+Epoch 17/20 	 lr=7.9e-05	 t=39s 	loss=0.082	
+Epoch 18/20 	 lr=5.3e-05	 t=80s 	loss=0.070	val_loss=0.257 	 auc=0.895	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=76s 	loss=0.065	val_loss=0.257 	 auc=0.896	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=78s 	loss=0.056	val_loss=0.259 	 auc=0.895	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/2/slowfast_3.pt
+
+
+-------------   Fold 5 / 5  -------------
+
+
+ -> Loading weighs from "../input/weights/slowfast_r50_256p_4x16x1_256e_kinetics400_rgb.pth"
+
+    -> 154990 training images
+    -> 38741 validation images
+    -> 34481593 trainable parameters
+
+Using 128 out of 2421 batches by limiting to 4 samples per player.
+
+Epoch 01/20 	 lr=5.0e-04	 t=40s 	loss=0.337	
+Epoch 02/20 	 lr=4.7e-04	 t=40s 	loss=0.239	
+Epoch 03/20 	 lr=4.5e-04	 t=41s 	loss=0.209	
+Epoch 04/20 	 lr=4.2e-04	 t=40s 	loss=0.194	
+Epoch 05/20 	 lr=3.9e-04	 t=40s 	loss=0.184	
+Epoch 06/20 	 lr=3.7e-04	 t=40s 	loss=0.169	
+Epoch 07/20 	 lr=3.4e-04	 t=40s 	loss=0.172	
+Epoch 08/20 	 lr=3.2e-04	 t=40s 	loss=0.157	
+Epoch 09/20 	 lr=2.9e-04	 t=40s 	loss=0.155	
+Epoch 10/20 	 lr=2.6e-04	 t=40s 	loss=0.143	
+Epoch 11/20 	 lr=2.4e-04	 t=40s 	loss=0.134	
+Epoch 12/20 	 lr=2.1e-04	 t=40s 	loss=0.120	
+Epoch 13/20 	 lr=1.8e-04	 t=40s 	loss=0.113	
+Epoch 14/20 	 lr=1.6e-04	 t=41s 	loss=0.108	
+Epoch 15/20 	 lr=1.3e-04	 t=40s 	loss=0.089	
+Epoch 16/20 	 lr=1.1e-04	 t=41s 	loss=0.095	
+Epoch 17/20 	 lr=7.9e-05	 t=40s 	loss=0.078	
+Epoch 18/20 	 lr=5.3e-05	 t=91s 	loss=0.069	val_loss=0.236 	 auc=0.910	 aucs_aux=0
+Epoch 19/20 	 lr=2.6e-05	 t=76s 	loss=0.064	val_loss=0.233 	 auc=0.912	 aucs_aux=0
+Epoch 20/20 	 lr=0.0e+00	 t=77s 	loss=0.058	val_loss=0.236 	 auc=0.912	 aucs_aux=0
+
+ -> Saving weights to ../logs_cls_3d/2021-01-03/2/slowfast_4.pt
+
+
+  -> CV auc : 0.5000

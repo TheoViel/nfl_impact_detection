@@ -1,0 +1,31 @@
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d50_KMS_200ep.pth
+
+Logging results to ../logs_cls_3d/2020-12-29/1/
+
+-------------   Fold 1 / 5  -------------
+
+
+ -> Loading weights from ../input/weights/r3d50_KMS_200ep.pth
+
+    -> 154983 training images
+    -> 38748 validation images
+    -> 46201025 trainable parameters
+
+Using 63 out of 2421 batches by limiting to 2 samples per player.
+
+
+ -> Loading weights from ../input/weights/r3d34_KM_200ep.pth
+
+
+ -> Loading weights from ../input/weights/r3d50_KMS_200ep.pth
+
+
+ -> Loading weights from ../input/weights/r3d50_KMS_200ep.pth
+
+
+ -> Loading weights from ../input/weights/r3d50_KMS_200ep.pth
+
