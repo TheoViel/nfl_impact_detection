@@ -11,6 +11,15 @@ class NFLDatasetCls3D(Dataset):
     Torch Dataset for the problem
     """
     def __init__(self, df, target_name="impact", root="", visualize=False):
+        """
+        Constructor
+
+        Args:
+            df (pandas dataframe): Data.
+            target_name (str, optional): Name of the target. Defaults to "impact".
+            root (str, optional): Directory containing the data. Defaults to "".
+            visualize (bool, optional): Whether to return an image for plotting. Defaults to False.
+        """
         super().__init__()
         self.visualize = visualize
         self.root = root
