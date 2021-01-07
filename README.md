@@ -23,14 +23,15 @@ Our solution consists of a two-step pipeline (detection and classification) foll
 #### Using 2D, Is This a Helmet Impact?
 
 Our detection model finds the yellow box as a possible helmet impact.
-<img src="https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1723677%2F941a0e534d355b76997947feae189af8%2Fquiz.png?generation=1609887772117223&alt=media" width="512">
 
+<img src="https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1723677%2F941a0e534d355b76997947feae189af8%2Fquiz.png?generation=1609887772117223&alt=media" width="512">
 
 From only 2D it is impossible to know whether these helmets are about to impact. It appears probable but maybe the silver helmet is about to pass behind the white helmet.
 
 #### Using 3D, Is This a Helmet Impact?
 
 Our classification model uses frames before and after this frame. With this information, our classification model correctly identifies that these two helmets do not impact but rather pass by each other. 
+
 <img src="https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1723677%2F681af4fc454c479b02a760dc82480396%2Fframes.png?generation=1609887810082337&alt=media" width="768">
 
 ### Impact Detection Model
@@ -43,7 +44,6 @@ We used DetectoRS(ResNeXt-101-32x4d) model for detecting impacts for [MMDetectio
 - 2-Class Detection Model: We used the final weights of the Helmet Detection Model (as pretrained weights) to build a Helmet/Impact Detection model. We used  +/- 4 frames from impact as the positive class.
 
 Using the Helmet Detection Model as pretrained weight makes the 2-Class Model converge much faster and detect impacts easier.
-
 
 This approach showed good performance to detect impact. We set the confidence score up to 0.9 which showed 0.39 public LB score after a simple post processing (without any classifiers). Then, we set a lower confidence score to catch more true positives after we plug in the classifier. DetectoRS showed good performance to detect impact but it took a long time to test our ideas.
 
