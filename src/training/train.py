@@ -3,163 +3,18 @@ import torch
 import numpy as np
 import torch.nn as nn
 
-from tqdm import tqdm  # noqa
 from torchcontrib.optim import SWA
 from torch.utils.data import DataLoader
 from sklearn.metrics import roc_auc_score
-from torch.utils.data.sampler import RandomSampler  # noqa
+from torch.utils.data.sampler import RandomSampler
 from transformers import get_linear_schedule_with_warmup
 
 from params import NUM_WORKERS
-from training.meter import NFLMeter
-from model_zoo.models_det import get_val_model
 from training.optim import define_optimizer
-from training.sampler import PlayerSampler, BalancedSampler  # noqa
+from training.sampler import PlayerSampler
 
 
-def collate_fn(batch):
-    return tuple(zip(*batch))
-
-
-def fit_det(
-    model,
-    train_dataset,
-    val_dataset,
-    optimizer_name="adam",
-    epochs=50,
-    batch_size=32,
-    val_bs=32,
-    warmup_prop=0.1,
-    lr=1e-3,
-    acc_steps=1,
-    swa_first_epoch=50,
-    num_classes=1,
-    verbose=1,
-    first_epoch_eval=0,
-    device="cuda",
-):
-    """
-    Fitting function for the object detection task.
-
-    Args:
-        model (torch model): Model to train.
-        train_dataset (torch dataset): Dataset to train with.
-        val_dataset (torch dataset): Dataset to validate with.
-        optimizer_name (str, optional): Optimizer name. Defaults to 'adam'.
-        epochs (int, optional): Number of epochs. Defaults to 50.
-        batch_size (int, optional): Training batch size. Defaults to 32.
-        val_bs (int, optional): Validation batch size. Defaults to 32.
-        warmup_prop (float, optional): Warmup proportion. Defaults to 0.1.
-        lr (float, optional): Learning rate. Defaults to 1e-3.
-        acc_steps (int, optional): Accumulation steps. Defaults to 1.
-        swa_first_epoch (int, optional): Epoch to start applying SWA from. Defaults to 50.
-        verbose (int, optional): Period (in epochs) to display logs at. Defaults to 1.
-        first_epoch_eval (int, optional): Epoch to start evaluating at. Defaults to 0.
-        device (str, optional): Device for torch. Defaults to "cuda".
-
-    Returns:
-        NFLMeter: Meter with predictions.
-    """
-
-    optimizer = define_optimizer(optimizer_name, model.parameters(), lr=lr)
-
-    if swa_first_epoch <= epochs:
-        optimizer = SWA(optimizer)
-
-    train_loader = DataLoader(
-        train_dataset,
-        batch_size=batch_size,
-        shuffle=True,
-        drop_last=True,
-        collate_fn=collate_fn,
-        num_workers=NUM_WORKERS,
-        pin_memory=True,
-    )
-
-    val_loader = DataLoader(
-        val_dataset,
-        batch_size=val_bs,
-        shuffle=False,
-        collate_fn=collate_fn,
-        num_workers=NUM_WORKERS,
-        pin_memory=True,
-    )
-
-    num_training_steps = int(epochs * len(train_loader) / acc_steps)
-    num_warmup_steps = int(warmup_prop * num_training_steps)
-    scheduler = get_linear_schedule_with_warmup(
-        optimizer, num_warmup_steps, num_training_steps
-    )
-
-    for epoch in range(epochs):
-        model.train()
-
-        start_time = time.time()
-        optimizer.zero_grad()
-
-        avg_loss = 0
-
-        if epoch + 1 > swa_first_epoch:
-            optimizer.swap_swa_sgd()
-            # print("Swap to SGD")
-
-        for step, batch in enumerate(train_loader):
-            images = torch.stack(batch[0]).to(device)
-            boxes = [box.to(device) for box in batch[1]]
-            labels = [label.to(device) for label in batch[2]]
-
-            loss, _, _ = model(images, boxes, labels)
-            loss.backward()
-
-            avg_loss += loss.item() / len(train_loader)
-
-            if ((step + 1) % acc_steps) == 0:
-                optimizer.step()
-                scheduler.step()
-                for param in model.parameters():
-                    param.grad = None
-
-        if epoch + 1 >= swa_first_epoch:
-            # print("update + swap to SWA")
-            optimizer.update_swa()
-            optimizer.swap_swa_sgd()
-
-        meter = NFLMeter(num_classes=num_classes)
-
-        if epoch + 1 >= first_epoch_eval or epoch + 1 == epochs:
-            model_eval = get_val_model(model).to(device)
-            with torch.no_grad():
-                for batch in val_loader:
-                    images = torch.stack(batch[0]).to(device)
-                    scales = torch.tensor([1] * len(images)).long().to(device)
-
-                    y_pred = model_eval(images, scales).detach()
-
-                    meter.update(batch, y_pred)
-
-            score_1, score_2, score_3 = meter.compute_scores()
-
-        elapsed_time = time.time() - start_time
-        if (epoch + 1) % verbose == 0:
-            elapsed_time = elapsed_time * verbose
-            lr = scheduler.get_last_lr()[0]
-            print(
-                f"Epoch {epoch + 1:02d}/{epochs:02d} \t lr={lr:.1e}\t t={elapsed_time:.0f}s\t"
-                f"loss={avg_loss:.3f}",
-                end="\t",
-            )
-            if epoch + 1 >= first_epoch_eval:
-                print(f"scores : {score_1:.4f} - {score_2:.4f} - {score_3:.4f}")
-            else:
-                print("")
-
-    del val_loader, train_loader, y_pred
-    torch.cuda.empty_cache()
-
-    return meter
-
-
-def fit_cls(
+def fit(
     model,
     train_dataset,
     val_dataset,
@@ -194,12 +49,15 @@ def fit_cls(
         lr (float, optional): Learning rate. Defaults to 1e-3.
         acc_steps (int, optional): Accumulation steps. Defaults to 1.
         swa_first_epoch (int, optional): Epoch to start applying SWA from. Defaults to 50.
+        num_classes_aux (int, optional): Number of auxiliary classes. Defaults to 0.
+        aux_mode (str, optional): Mode for auxiliary classification. Defaults to 'sigmoid'.
         verbose (int, optional): Period (in epochs) to display logs at. Defaults to 1.
         first_epoch_eval (int, optional): Epoch to start evaluating at. Defaults to 0.
         device (str, optional): Device for torch. Defaults to "cuda".
 
     Returns:
         numpy array [len(val_dataset)]: Last predictions on the validation data.
+        numpy array [len(val_dataset) x num_classes_aux]: Last aux predictions on the val data.
     """
 
     optimizer = define_optimizer(optimizer_name, model.parameters(), lr=lr)
@@ -214,7 +72,6 @@ def fit_cls(
     if samples_per_player:
         sampler = PlayerSampler(
             RandomSampler(train_dataset),
-            # BalancedSampler(train_dataset, alpha=1),
             train_dataset.players,
             batch_size=batch_size,
             drop_last=True,
@@ -234,7 +91,6 @@ def fit_cls(
     else:
         train_loader = DataLoader(
             train_dataset,
-            # sampler=BalancedSampler(train_dataset, alpha=1),
             batch_size=batch_size,
             shuffle=True,
             drop_last=True,
@@ -266,7 +122,6 @@ def fit_cls(
 
         if epoch + 1 > swa_first_epoch:
             optimizer.swap_swa_sgd()
-            # print("Swap to SGD")
 
         for batch in train_loader:
             images = batch[0].to(device)
@@ -288,7 +143,6 @@ def fit_cls(
                 param.grad = None
 
         if epoch + 1 >= swa_first_epoch:
-            # print("update + swap to SWA")
             optimizer.update_swa()
             optimizer.swap_swa_sgd()
 

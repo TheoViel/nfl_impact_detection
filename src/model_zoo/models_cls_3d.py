@@ -1,9 +1,8 @@
-import torch
 import torch.nn as nn
 
 from model_zoo.resnet_3d import generate_model, forward_with_aux_resnet_3d
 from model_zoo.i3d import InceptionI3d
-from model_zoo.configs import CONFIGS
+from model_zoo.mmaction_models import CONFIGS, forward_slowfast, forward_slowonly
 from utils.torch import load_model_weights_3d, load_model_weights
 from params import DATA_PATH
 
@@ -26,11 +25,14 @@ CP_PATHS = {
 def get_model_cls_3d(name, num_classes=1, num_classes_aux=0, pretrained=True):
     """
     Loads a pretrained model.
-    Supports Resnet based models.
+    Supports  resnet18, resnet34, resnet50, i3d, slowfast & slowonly.
+    Strides are modified to be adapted to the small input size.
 
     Args:
         name (str): Model name
         num_classes (int, optional): Number of classes. Defaults to 1.
+        num_classes_aux (int, optional): Number of aux classes. Defaults to 0.
+        pretrained (bool, optional): Whether to load pretrained weights. Defaults to True.
 
     Raises:
         NotImplementedError: Specified model name is not supported.
@@ -134,38 +136,3 @@ def get_model_cls_3d(name, num_classes=1, num_classes_aux=0, pretrained=True):
             model.fc_aux = nn.Linear(model.nb_ft, num_classes_aux)
 
     return model
-
-
-def forward_slowfast(self, x):
-    x = x[:, :, 1:, :, :]  # size BS x 8 x C x W x H
-    ft1, ft2 = self.extract_feat(x)
-
-    ft1 = self.avg_pool(ft1).view(x.size(0), -1)
-    ft2 = self.avg_pool(ft2).view(x.size(0), -1)
-
-    ft = torch.cat([ft1, ft2], -1)
-    ft = self.dropout(ft)
-
-    y = self.fc(ft)
-
-    if self.num_classes_aux > 0:
-        y_aux = self.fc_aux(ft)
-        return y, y_aux
-
-    return y, 0
-
-
-def forward_slowonly(self, x):
-    ft = self.extract_feat(x)
-    # print(ft.size())
-
-    ft = self.avg_pool(ft).view(x.size(0), -1)
-    ft = self.dropout(ft)
-
-    y = self.fc(ft)
-
-    if self.num_classes_aux > 0:
-        y_aux = self.fc_aux(ft)
-        return y, y_aux
-
-    return y, 0

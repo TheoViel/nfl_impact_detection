@@ -4,16 +4,15 @@ import numpy as np
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import GroupKFold
 
-from training.train import fit_cls
+from training.train import fit
 from data.dataset import NFLDatasetCls3D
-# from data.transforms import get_transfos_cls_3d
 from model_zoo.models_cls_3d import get_model_cls_3d
 from utils.torch import seed_everything, count_parameters, save_model_weights
 
 
 def train_cls_3d(config, df_train, df_val, fold, log_folder=None):
     """
-    Trains and validate a model.
+    Trains and validate a 3D classification model.
 
     Args:
         config (Config): Parameters.
@@ -39,16 +38,14 @@ def train_cls_3d(config, df_train, df_val, fold, log_folder=None):
 
     train_dataset = NFLDatasetCls3D(
         df_train.copy(),
-        transforms=None,  # get_transfos_cls_3d(train=True),
         root=config.img_path,
         target_name=config.target_name,
     )
 
     val_dataset = NFLDatasetCls3D(
         df_val.copy(),
-        transforms=None,  # get_transfos_cls_3d(train=False),
         root=config.img_path,
-        target_name="extended_impact"  # config.target_name,
+        target_name="extended_impact"
     )
 
     n_parameters = count_parameters(model)
@@ -57,7 +54,7 @@ def train_cls_3d(config, df_train, df_val, fold, log_folder=None):
     print(f"    -> {len(val_dataset)} validation images")
     print(f"    -> {n_parameters} trainable parameters\n")
 
-    pred_val, pred_val_aux = fit_cls(
+    pred_val, pred_val_aux = fit(
         model,
         train_dataset,
         val_dataset,
@@ -90,7 +87,7 @@ def train_cls_3d(config, df_train, df_val, fold, log_folder=None):
 
 def k_fold_cls_3d(config, df, log_folder=None):
     """
-    Performs a video grouped k-fold cross validation for the classification task.
+    Performs a video grouped k-fold cross validation for the 3D classification task.
 
     Args:
         config (Config): Parameters.
