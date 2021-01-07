@@ -85,7 +85,7 @@ They did however help private LB, but this was after the leak so we didn’t kno
 #### More 3D Models
 
 After recovering from NYE, I did some state of the art browsing and implemented 3 new 3D models that all outperformed the previous ones : 
-[i3d](https://github.com/piergiaj/pytorch-i3d), [Slowfast](https://github.com/open-mmlab/mmaction2) and [Slowonly with Omnisource pretrained weights](https://github.com/open-
+[i3d](https://github.com/piergiaj/pytorch-i3d), [Slowfast](https://github.com/open-mmlab/mmaction2) and [Slowonly with Omnisource pretrained weights](https://github.com/open-mmlab/mmaction2).
 
 This was done on the 2nd and 3rd of January, so we had 10 submissions to try these out because of my procrastinating. My first submissions using them gave a small LB boost and we reached 0.50+. 
 
