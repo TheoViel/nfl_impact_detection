@@ -2,6 +2,16 @@ import numpy as np
 
 
 def expand_boxes(df, r=0):
+    """
+    Expands bounding boxes by a specified ratio.
+
+    Args:
+        df (pandas dataframe): Predictions of the format expected by the competition.
+        r (int, optional): Ratio. Defaults to 0.
+
+    Returns:
+        pandas dataframe: Expanded predictions, of the format expected by the competition.
+    """
     if r > 0:
         # Expansion
         df.left -= df.width * r / 2

@@ -25,3 +25,7 @@ MEAN = np.array([0.485, 0.456, 0.406])
 STD = np.array([0.229, 0.224, 0.225])
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+STRIDE = 2
+N_FRAMES = 9
+MARGIN = 2

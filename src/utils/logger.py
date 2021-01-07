@@ -61,7 +61,7 @@ def prepare_log_folder(log_path):
     Logs will be saved at log_path/date_of_day/exp_id
 
     Args:
-        log_path ([str]): Directory
+        log_path (str): Directory
 
     Returns:
         str: Path to the created log folder

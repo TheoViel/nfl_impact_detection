@@ -1,3 +1,5 @@
+# From https://www.kaggle.com/nvnnghia/evaluation-metrics
+
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 
@@ -121,40 +123,3 @@ def boxes_f1_score(preds, truths):
 
     f1_score = 2 * (precision * recall) / (precision + recall + 1e-6)
     return f1_score
-
-
-def num_detected_impacts(gt_boxes, pred_boxes, max_dist=4, threshold=0.35):
-
-    if len(pred_boxes) == 0 or len(gt_boxes) == 0:
-        return 0
-
-    cost_matrix = np.zeros((len(gt_boxes), len(pred_boxes)))
-    for i, box1 in enumerate(gt_boxes):
-        for j, box2 in enumerate(pred_boxes):
-            dist = abs(box1[0] - box2[0])
-            if dist > max_dist:
-                continue
-            iou = iou_score(box1[1:], box2[1:])
-
-            if iou < threshold:
-                continue
-
-            else:
-                cost_matrix[i, j] = 1
-    return cost_matrix.max(1).sum()
-
-
-def detection_ratio(preds, truths):
-    detected = 0
-    total = 0
-
-    for pred_h, truth_i in zip(preds, truths):
-        total += len(truth_i)
-        detected += num_detected_impacts(
-            truth_i,
-            pred_h,
-            max_dist=4,
-            threshold=0.35
-        )
-
-    return detected / total

@@ -6,6 +6,16 @@ from utils.metrics import iou_score
 
 
 def compute_ious(df, max_dist=10):
+    """
+    Computes ious between boxes. If boxes are too far the iou is set to 0.
+
+    Args:
+        df (pandas dataframe): Predicted boxes.
+        max_dist (int, optional): Maximum frame distance to compute iou for. Defaults to 10.
+
+    Returns:
+        np array [len(df) x len(df)]: ious between boxes.
+    """
     ious = np.zeros((len(df), len(df)))
     for i in range(len(df)):
         for j in range(len(df)):
@@ -29,6 +39,15 @@ def compute_ious(df, max_dist=10):
 
 
 def get_centroids(clusts):
+    """
+    Returns the middle of a cluster.
+
+    Args:
+        clusts (list of lists of ints): Clusters.
+
+    Returns:
+        list of ints: Centroids.
+    """
     centroids = []
     for clust in clusts:
         if len(clust) == 1:
@@ -42,6 +61,22 @@ def get_centroids(clusts):
 
 
 def form_clusters(df, threshold=0.5, max_dist=10):
+    """
+    Forms cluster identified as being from the same impact.
+    The algorithm loops over the boxes, in frame order.
+    Each box is assigned to the cluster of the box has the one it has the highest IOU with.
+    Only IOUs > threshold are considered, and if no box is found, it is given a new cluster.
+    In the end, only the centroid of the cluster is kept.
+
+    Args:
+        df (pandas dataframe): Predicted boxes.
+        threshold (float, optional): Threshold for iou. Defaults to 0.5.
+        max_dist (int, optional): Maximum frame distance. Defaults to 10.
+
+    Returns:
+        list of lists of ints: Clusters.
+        list of ints : Associad centroids.
+    """
     ious = compute_ious(df, max_dist=max_dist)
 
     frames = df["frame"]
@@ -74,6 +109,22 @@ def form_clusters(df, threshold=0.5, max_dist=10):
 
 
 def post_process_adjacency(df, threshold=0.5, max_dist=10, min_clust_size=0):
+    """
+    Post-processing to make sure impacts are only counted once.
+    For all videos, the algorithm loops over the boxes, in frame order.
+    Each box is assigned to the cluster of the box has the one it has the highest IOU with.
+    Only IOUs > threshold are considered, and if no box is found, it is given a new cluster.
+    In the end, only the centroid of the cluster is kept.
+
+    Args:
+        df (pandas dataframe): Predictions of the format expected by the competition.
+        threshold (float, optional): Threshold for iou. Defaults to 0.5.
+        max_dist (int, optional): Maximum frame distance. Defaults to 10.
+        min_clust_size (int, optional): Minimum cluster size to consider. Defaults to 0.
+
+    Returns:
+        pandas dataframe: Processed predictions, of the format expected by the competition.
+    """
     dfs_pp = []
     for video in tqdm(df["video"].unique()):
         df_video = df[df["video"] == video].reset_index(drop=True).copy()

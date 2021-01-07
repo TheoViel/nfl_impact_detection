@@ -86,34 +86,6 @@ def load_model_weights_3d(model, filename, verbose=1, cp_folder=""):
     return model
 
 
-def load_effdet_weights(model, filename, verbose=1, cp_folder=""):
-    """
-    Loads the weights of an Efficientdet model.
-
-    Args:
-        model (torch model): Model to load the weights to.
-        filename (str): Name of the checkpoint.
-        verbose (int, optional): Whether to display infos. Defaults to 1.
-        cp_folder (str, optional): Folder to load from. Defaults to "".
-
-    Returns:
-        torch model: Model with loaded weights.
-    """
-
-    if verbose:
-        print(f"\n -> Loading weights from {os.path.join(cp_folder,filename)}\n")
-
-    state_dict = torch.load(os.path.join(cp_folder, filename), map_location="cpu")
-    state_dict["anchors.boxes"] = state_dict["anchor_labeler.anchors.boxes"]
-    del state_dict["anchor_labeler.anchors.boxes"]
-
-    model.load_state_dict(
-        state_dict,
-        strict=True,
-    )
-    return model
-
-
 def count_parameters(model, all=False):
     """
     Count the parameters of a model.

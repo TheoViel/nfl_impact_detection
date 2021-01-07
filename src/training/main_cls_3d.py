@@ -1,7 +1,6 @@
 import gc
 import torch
 import numpy as np
-from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import GroupKFold
 
 from training.train import fit
@@ -23,7 +22,7 @@ def train_cls_3d(config, df_train, df_val, fold, log_folder=None):
 
     Returns:
         np array: Validation predictions.
-        pandas dataframe: Training history.
+        np array: Auxiliary validation predictions.
     """
 
     seed_everything(config.seed)
@@ -104,9 +103,6 @@ def k_fold_cls_3d(config, df, log_folder=None):
             (idx[df["val_idx"] != k], idx[df["val_idx"] == k]) for k in range(config.k)
         ]
 
-    pred_oof = np.zeros(len(df))
-    pred_oof_aux = np.zeros((len(df), config.num_classes_aux))
-
     for i, (train_idx, val_idx) in enumerate(splits):
         if i in config.selected_folds:
             print(f"\n-------------   Fold {i + 1} / {config.k}  -------------\n")
@@ -117,7 +113,7 @@ def k_fold_cls_3d(config, df, log_folder=None):
             df_val = df.iloc[val_idx].copy()
             df_val = df_val[df_val["frame_has_impact"] == 1]
 
-            pred_val, pred_val_aux, model = train_cls_3d(
+            pred_val, pred_val_aux = train_cls_3d(
                 config, df_train, df_val, i, log_folder=log_folder
             )
 
@@ -126,15 +122,6 @@ def k_fold_cls_3d(config, df, log_folder=None):
                 np.save(log_folder + f"preds_aux_{i}.npy", pred_val_aux)
                 np.save(log_folder + f"val_idx_{i}.npy", val_idx)
 
-            del model, df_val, df_train
+            del df_val, df_train, pred_val, pred_val_aux
             gc.collect()
             torch.cuda.empty_cache()
-
-    if log_folder is not None:
-        np.save(log_folder + "pred_oof.npy", pred_oof)
-        np.save(log_folder + "pred_oof_aux.npy", pred_oof_aux)
-
-    auc = roc_auc_score(df[config.target_name], pred_oof)
-    print(f"\n  -> CV auc : {auc:.4f}")
-
-    return pred_oof, pred_oof_aux

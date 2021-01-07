@@ -7,46 +7,22 @@ from utils.torch import load_model_weights
 from torch.utils.data import DataLoader, Dataset
 
 from model_zoo.models_cls_3d import get_model_cls_3d
-
-
-def extend_box(box, size=64):
-    w = box[1] - box[0]
-    h = box[3] - box[2]
-
-    dw = (size - w) / 2
-    dh = (size - h) / 2
-
-    new_box = [
-        box[0] - np.floor(dw),
-        box[1] + np.ceil(dw),
-        box[2] - np.floor(dh),
-        box[3] + np.ceil(dh),
-    ]
-    return np.array(new_box).astype(int)
-
-
-def adapt_to_shape(box, shape):
-    if box[0] < 0:
-        box[1] -= box[0]
-        box[0] = 0
-    elif box[1] >= shape[1]:
-        diff = box[1] - shape[1]
-        box[1] -= diff
-        box[0] -= diff
-
-    if box[2] < 0:
-        box[3] -= box[2]
-        box[2] = 0
-
-    elif box[3] >= shape[0]:
-        diff = box[3] - shape[0]
-        box[3] -= diff
-        box[2] -= diff
-
-    return box
+from data.preparation import adapt_to_shape, extend_box
 
 
 def get_adjacent_frames(frame, max_frame=100, n_frames=9, stride=1):
+    """
+    Computes the adjacent frames to a given frame.
+
+    Args:
+        frame (int): Frame.
+        max_frame (int, optional): Maximum frame available. Defaults to 100.
+        n_frames (int, optional): Number of frames. Defaults to 9.
+        stride (int, optional): Spacing between frames. Defaults to 1.
+
+    Returns:
+        list of int: Frames.
+    """
     frames = np.arange(n_frames) * stride
     frames = frames - frames[n_frames // 2] + frame
 
@@ -59,7 +35,20 @@ def get_adjacent_frames(frame, max_frame=100, n_frames=9, stride=1):
 
 
 class NFLDatasetClsInference3D(Dataset):
+    """
+    Dataset for inference.
+    """
     def __init__(self, df, n_frames=9, stride=2, visualize=False, root=""):
+        """
+        Constructor
+
+        Args:
+            df (pandas dataframe): Data.
+            n_frames (int, optional): Number of frames. Defaults to 9.
+            stride (int, optional): Spacing between frames. Defaults to 2.
+            visualize (bool, optional): Whether to return an image for plotting. Defaults to False.
+            root (str, optional): Directory containing the data. Defaults to "".
+        """
         super().__init__()
         self.n_frames = n_frames
         self.stride = stride
@@ -108,6 +97,17 @@ class NFLDatasetClsInference3D(Dataset):
 
 
 def retrieve_model(config, fold=0, log_folder=""):
+    """
+    Retrives a model from a config and loads weights.
+
+    Args:
+        config (Config): Model config.
+        fold (int, optional): Fold number of the weights. Defaults to 0.
+        log_folder (str, optional): Where to load weights from. Defaults to "".
+
+    Returns:
+        torch model: Trained model.
+    """
     model = get_model_cls_3d(
         config["name"],
         num_classes=config["num_classes"],
@@ -122,6 +122,21 @@ def retrieve_model(config, fold=0, log_folder=""):
 
 
 def inference(df, models, batch_size=256, device="cuda", root="", n_frames=9, stride=2):
+    """
+    Performs inference on a dataset.
+
+    Args:
+        df (pandas dataframe): Data.
+        models (list of torch models): Models.
+        batch_size (int, optional): Batch size. Defaults to 256.
+        device (str, optional): Torch device. Defaults to "cuda".
+        root (str, optional): Data directory. Defaults to "".
+        n_frames (int, optional): Number of frames. Defaults to 9.
+        stride (int, optional): Spacing between frames. Defaults to 2.
+
+    Returns:
+        [type]: [description]
+    """
     models = [model.to(device).eval() for model in models]
 
     dataset = NFLDatasetClsInference3D(
