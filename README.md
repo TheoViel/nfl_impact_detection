@@ -140,8 +140,50 @@ Our competition inference notebook is available [here](https://www.kaggle.com/cd
 
 ## Repository structure
 
-> TODO
+The reprository organization and its main components is detailed bellow :
+
+- `mmaction2/` : MMaction2 repository, to avoid fully installing the package which can be a bit tricky.
+
+- `notebooks/` : Notebooks to perform data preparation, training & inference
+  - `Data preparation.ipynb` : Extracts images from videos
+  - `Data preparation Cls 3D.ipynbb` : Extracts 3D helmet crops from images
+  - `Inference Cls.ipynb` : Performs inference
+  - `Training Cls 3D.ipynb` : Trains a 3D classification model
+  
+- `output/` : Outputs of the training
+  - `22_12/` : Results of the detection model
+  - `folds.csv` : Cross-validation folds
+  - `df_preds.csv` : 3D classifier predictions on the best detection model
+  
+- `src/` : Source code
+  - `data/` : Datasets and data preparation functions
+  - `inference` : Functions for inference
+  - `model_zoo` : 3D classification Models
+  - `post_processing` : Adjacency, view and expansion post-processing 
+  - `training` : Training functions
+  - `utils` : Logger, torch utils and metric
+  - `configs.py` : Model configs of the final blend
+  - `params.py` : Global parameters
+
 
 ## Training a model
 
-> TODO
+Training a model is done in the notebooks. Paths have to be updated in `src/params.py`. 
+
+- First download the competition data from [Kaggle](https://www.kaggle.com/c/nfl-impact-detection/data).
+  - Specify `DATA_PATH` and `TRAIN_VID_PATH` accordingly to where you store the data
+  
+- Run the `Data preparation.ipynb` notebook
+  - This extracts the frames from the videos and computes a training dataframe
+  - Specify `IMG_PATH_F`  accordingly to where you want to save the images
+  
+- Run the `Data preparation.ipynb` notebook
+  - This extracts 3D crops around the training helmets
+  - Specify `CROP_PATH_3D`  accordingly to where you want to save the 3D crops
+  
+- Run the `Training Cls 3D.ipynb` notebook
+  - Specify the `Config` you want to use. The ones used in the final ensembles are in `src/configs.py`
+  - Specify `LOG_PATH_CLS_3D` accordingly to where you want  to log results
+
+Evaluation of the model is done in the `Inference Cls.ipynb` notebook.
+You can re-use the pre-computed predictions `preds.csv`, or compute new ones by specifying `CP_FOLDER` and `configs` in the `Classifier 3D inference` section.
